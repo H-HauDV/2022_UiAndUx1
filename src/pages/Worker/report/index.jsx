@@ -1,8 +1,11 @@
 import React from 'react'
-import "./report.scss"
+
+
 const Report = () => {
   return (
-    <div>Report</div>
+    <div>
+      report
+    </div>
   )
 }
 

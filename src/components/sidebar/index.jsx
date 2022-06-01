@@ -7,7 +7,7 @@ import WorkHistoryOutlinedIcon from '@mui/icons-material/WorkHistoryOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import QueryStatsOutlinedIcon from '@mui/icons-material/QueryStatsOutlined';
-const Sidebar = () => {
+const Sidebar = ({active}) => {
   return (
     <div className="sidebar">
         <div className="top">
@@ -19,33 +19,33 @@ const Sidebar = () => {
                 <p className="title">MAIN</p>
                 <li>
                     <DashboardIcon className="icon"/>
-                    <span>Home</span>
+                    <span className="link"><a href="/worker">Home</a></span>
                 </li>
                 <li>
                     <PersonOutlineOutlinedIcon className="icon"/>
-                    <span>Profile</span>
+                    <span className="link"><a href="/worker">Profile</a></span>
                 </li>
                 <li>
                     <QueryStatsOutlinedIcon className="icon"/>
-                    <span>Stats</span>
+                    <span className="link"><a href="/worker">Stats</a></span>
                 </li>
                 <p className="title">REPORT</p>
                 <li>
                     <SummarizeOutlinedIcon className="icon"/>
-                    <span>Report</span>
+                    <span className="link"><a href="/worker/report">Report</a></span>
                 </li>
                 <li>
                     <WorkHistoryOutlinedIcon className="icon"/>
-                    <span>History</span>
+                    <span className="link"><a href="/worker">History</a></span>
                 </li>
                 <p className="title">OTHER</p>
                 <li>
                     <SettingsOutlinedIcon className="icon"/>
-                    <span>Setting</span>
+                    <span className="link"><a href="/worker">Setting</a></span>
                 </li>
                 <li>
                     <LogoutOutlinedIcon className="icon"/>
-                    <span>Logout</span>
+                    <span className="link"><a href="/worker">Logout</a></span>
                 </li>
             </ul>
         </div>

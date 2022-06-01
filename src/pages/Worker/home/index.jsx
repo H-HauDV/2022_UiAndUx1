@@ -1,18 +1,19 @@
 import React from 'react'
-import Sidebar from '../../../components/sidebar'
-import Navbar from '../../../components/navbar'
+import Widget from '../../../components/widget'
+import Layout from '../../../components/layout'
 
 import "./home.scss"
 const Home = () => {
   return (
-    <div className="home">
-        <Sidebar/>
-        <div className="homeContainer">
-          <Navbar/>
-          <div className="widget"></div>
+    <Layout>
+      <div className="dashBoard">
+        <div className="widgets">
+          <Widget/>
+          <Widget/>
+          <Widget/>
         </div>
-    </div>
+      </div>
+    </Layout>
   )
 }
-
 export default Home

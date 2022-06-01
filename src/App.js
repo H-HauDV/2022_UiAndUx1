@@ -1,6 +1,8 @@
-import Home from "./pages/home/Home";
-import Login from "./pages/login/Login";
-import Report from "./pages/report/Report";
+import WorkerHome from "./pages/Worker/home";
+import Login from "./pages/login";
+import WorkerReport from "./pages/Worker/report";
+import WorkerHistory from "./pages/Worker/history";
+
 
 import {
   BrowserRouter,
@@ -13,9 +15,12 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/report" element={<Report />} />
+          <Route path="login" element={<Login />} />
+          <Route path="worker">
+            <Route index element={<WorkerHome />} />
+            <Route path="report" element={<WorkerReport />} />
+            <Route path="history" element={<WorkerHistory />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>

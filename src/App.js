@@ -3,7 +3,7 @@ import Login from "./pages/login";
 import WorkerReport from "./pages/Worker/report";
 import WorkerHistory from "./pages/Worker/history";
 
-import "antd/dist/antd.css";
+import 'antd/dist/antd.min.css'
 import {
   BrowserRouter,
   Routes,

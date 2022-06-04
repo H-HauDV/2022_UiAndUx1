@@ -3,6 +3,8 @@ import LRcard from '../../../components/LRcard'
 import Layout from '../../../components/layout'
 import Featured from '../../../components/featured'
 import Chart from '../../../components/chart'
+import Calendar from '../../../components/calendar'
+
 
 import "./home.scss"
 const Home = () => {
@@ -18,6 +20,9 @@ const Home = () => {
         <div className="charts">
           <Featured/>
           <Chart/>
+        </div>
+        <div className="calendar">
+          <Calendar/>
         </div>
       </div>
     </Layout>

@@ -3,7 +3,7 @@ import LRcard from '../../../components/LRcard'
 import Layout from '../../../components/layout'
 import Featured from '../../../components/featured'
 import Chart from '../../../components/chart'
-import Calendar from '../../../components/calendar'
+import CalendarComp from '../../../components/calendar'
 
 
 import "./home.scss"
@@ -22,7 +22,7 @@ const Home = () => {
           <Chart/>
         </div>
         <div className="calendar">
-          <Calendar/>
+          <CalendarComp/>
         </div>
       </div>
     </Layout>

@@ -7,7 +7,15 @@ import WorkHistoryOutlinedIcon from '@mui/icons-material/WorkHistoryOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import QueryStatsOutlinedIcon from '@mui/icons-material/QueryStatsOutlined';
+import {useAuth} from '../../auth';
+import { useNavigate } from 'react-router-dom';
 const Sidebar = ({active}) => {
+  const auth = useAuth()
+  const navigate = useNavigate()
+  const handleLogout = () => {
+      auth.logout()
+      navigate('/login')
+  }
   return (
     <div className="sidebar">
         <div className="top">
@@ -45,7 +53,8 @@ const Sidebar = ({active}) => {
                 </li>
                 <li>
                     <LogoutOutlinedIcon className="icon"/>
-                    <span className="link"><a href="/worker">Logout</a></span>
+                    {/* <span className="link"><a href="/worker">Logout</a></span> */}
+                    <span className="link" onClick={handleLogout}>Logout</span>
                 </li>
             </ul>
         </div>

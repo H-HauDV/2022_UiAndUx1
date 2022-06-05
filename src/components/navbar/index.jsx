@@ -7,8 +7,9 @@ import FullscreenExitOutlinedIcon from '@mui/icons-material/FullscreenExitOutlin
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import ListOutlinedIcon from '@mui/icons-material/ListOutlined';
-
+import { useAuth } from '../../auth';
 const Navbar = () => {
+  const auth = useAuth()
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -44,7 +45,7 @@ const Navbar = () => {
           </div>
           <div className="item">
             <img src="https://i.stack.imgur.com/5Kgaq.jpg?s=192&g=1" alt="" className="avatar" />
-            
+            {auth.user}
           </div>
         </div>
       </div>

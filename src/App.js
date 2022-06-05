@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route path="login" element={<Login />} />
           <Route path="worker">
-            <Route index element={<RequireAuth><WorkerHome /></RequireAuth>} />
+            <Route index element={<WorkerHome />} />
             <Route path="report" element={<WorkerReport />} />
             <Route path="history" element={<WorkerHistory />} />
           </Route>

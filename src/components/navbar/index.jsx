@@ -1,55 +1,60 @@
-import React from 'react'
-import "./navbar.scss"
-import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
-import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
-import FullscreenExitOutlinedIcon from '@mui/icons-material/FullscreenExitOutlined';
-import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
-import ListOutlinedIcon from '@mui/icons-material/ListOutlined';
+import React from "react";
+import "./navbar.scss";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import FullscreenExitOutlinedIcon from "@mui/icons-material/FullscreenExitOutlined";
+import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
+import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
+import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
+import { useNavigate } from "react-router-dom";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 const Navbar = () => {
+  let navigate = useNavigate();
   return (
     <div className="navbar">
       <div className="wrapper">
+        <div className="btn-back">
+          <ArrowBackIcon onClick={() => navigate(-1)}></ArrowBackIcon>
+        </div>
         <div className="search">
           <input type="text" placeholder="Search..." />
           <SearchOutlinedIcon />
         </div>
         <div className="items">
           <div className="item">
-            <LanguageOutlinedIcon className="icon"/>
+            <LanguageOutlinedIcon className="icon" />
             English
           </div>
           <div className="item">
-            <DarkModeOutlinedIcon className="icon"/>
-            
+            <DarkModeOutlinedIcon className="icon" />
           </div>
           <div className="item">
-            <FullscreenExitOutlinedIcon className="icon"/>
-            
+            <FullscreenExitOutlinedIcon className="icon" />
           </div>
           <div className="item">
-            <NotificationsNoneOutlinedIcon className="icon"/>
+            <NotificationsNoneOutlinedIcon className="icon" />
             <div className="counter">1</div>
           </div>
           <div className="item">
-            <ChatBubbleOutlineOutlinedIcon className="icon"/>
+            <ChatBubbleOutlineOutlinedIcon className="icon" />
             <div className="counter">2</div>
-            
           </div>
           <div className="item">
-            <ListOutlinedIcon className="icon"/>
-            
+            <ListOutlinedIcon className="icon" />
           </div>
           <div className="item">
-            <img src="https://i.stack.imgur.com/5Kgaq.jpg?s=192&g=1" alt="" className="avatar" />
-            
+            <img
+              src="https://i.stack.imgur.com/5Kgaq.jpg?s=192&g=1"
+              alt=""
+              className="avatar"
+            />
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

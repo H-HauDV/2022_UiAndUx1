@@ -4,7 +4,6 @@ import WorkerReport from "./pages/Worker/report";
 import WorkerHistory from "./pages/Worker/history";
 import { AuthProvider } from "./auth";
 import 'antd/dist/antd.min.css';
-import { RequireAuth } from "./requireAuth";
 import {
   BrowserRouter,
   Routes,

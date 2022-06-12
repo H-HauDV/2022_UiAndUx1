@@ -1,0 +1,67 @@
+.first-section {
+    .mission-summary {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        border-bottom: 1px solid #d9d9d9;
+        .mission-summary_card {
+            display: flex;
+            flex-direction: column;
+            padding: 0 30px;
+            width: 33%;
+
+            .mission-summary_title {
+                font-size: 1rem;
+                font-weight: bold;
+            }
+            .mission-summary_total {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                span {
+                    font-size: 2rem;
+                    font-weight: 600;
+                    color: #000000;
+                }
+
+                .percentage {
+                    display: flex;
+                    align-items: center;
+                    font-size: 1rem;
+                    border-radius: 15px;
+                    height: 25px;
+                    padding-right: 6px;
+                    font-weight: 600;
+
+                    &.positive {
+                        background-color: #a0ff92;
+                        color: #0b6037;
+                        svg {
+                            path {
+                                color: #0b6037;
+                            }
+                        }
+                    }
+                    &.negative {
+                        background-color: #fe807e;
+                        color: #850000;
+                        svg {
+                            path {
+                                color: #850000;
+                            }
+                        }
+                    }
+                }
+            }
+            .mission-summary_time {
+                font-size: 1rem;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.divider {
+    width: 1px;
+    background-color: #d9d9d9;
+}

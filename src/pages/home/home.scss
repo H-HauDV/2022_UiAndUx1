@@ -1,0 +1,17 @@
+.work-timeline {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 8px;
+}
+
+.text-divider {
+    font-size: 1.2rem;
+    height: 30px;
+}
+
+.job-overview {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 60px;
+    padding: 30px 0;
+}

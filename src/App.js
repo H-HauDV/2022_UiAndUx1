@@ -5,7 +5,7 @@ import WorkerHistory from "./pages/Worker/history";
 import ReportDetail from "./pages/Worker/history/detail";
 
 import "antd/dist/antd.min.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import LayoutContainer from "./components/layoutContainer";
 import Home from "./pages/Worker/home";
 import MissionPage from "./pages/mission";
@@ -16,7 +16,8 @@ function App() {
       <BrowserRouter>
         <LayoutContainer>
           <Routes>
-            <Route path="/" element={<HomePage />}></Route>
+            <Route path="/trang-chu" element={<HomePage />}></Route>
+            <Route path="/" element={<Navigate to={"/trang-chu"} />} />
             <Route path="login" element={<Login />} />
             <Route path="nhiem-vu" element={<MissionPage />} />
             <Route path="worker">

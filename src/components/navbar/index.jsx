@@ -1,56 +1,84 @@
 import React from "react";
 import "./navbar.scss";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
-import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-import FullscreenExitOutlinedIcon from "@mui/icons-material/FullscreenExitOutlined";
-import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
-import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
-import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
 import { useNavigate } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowDropDown from "@mui/icons-material/ArrowDropDown";
+import { Button, Dropdown, Menu } from "antd";
+
+const menu = (
+  <Menu
+    items={[
+      {
+        key: "1",
+        label: (
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.antgroup.com"
+          >
+            1st menu item
+          </a>
+        ),
+      },
+      {
+        key: "2",
+        label: (
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.aliyun.com"
+          >
+            2nd menu item
+          </a>
+        ),
+      },
+      {
+        key: "3",
+        label: (
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.luohanacademy.com"
+          >
+            3rd menu item
+          </a>
+        ),
+      },
+    ]}
+  />
+);
 
 const Navbar = () => {
   let navigate = useNavigate();
   return (
-    <div className="navbar">
-      <div className="wrapper">
-        <div className="btn-back">
-          <ArrowBackIcon onClick={() => navigate(-1)}></ArrowBackIcon>
+    <div className="container">
+      <div className="navbar">
+        <div className="first-item">
+          <div className="btn-back">
+            <ArrowBackIcon onClick={() => navigate(-1)}></ArrowBackIcon>
+          </div>
+          <div className="search">
+            <input type="text" placeholder="Search..." />
+            <SearchOutlinedIcon />
+          </div>
         </div>
-        <div className="search">
-          <input type="text" placeholder="Search..." />
-          <SearchOutlinedIcon />
-        </div>
-        <div className="items">
-          <div className="item">
-            <LanguageOutlinedIcon className="icon" />
-            English
-          </div>
-          <div className="item">
-            <DarkModeOutlinedIcon className="icon" />
-          </div>
-          <div className="item">
-            <FullscreenExitOutlinedIcon className="icon" />
-          </div>
-          <div className="item">
-            <NotificationsNoneOutlinedIcon className="icon" />
-            <div className="counter">1</div>
-          </div>
-          <div className="item">
-            <ChatBubbleOutlineOutlinedIcon className="icon" />
-            <div className="counter">2</div>
-          </div>
-          <div className="item">
-            <ListOutlinedIcon className="icon" />
-          </div>
-          <div className="item">
+
+        <div className="last-item">
+          <div className="avatar">
             <img
-              src="https://i.stack.imgur.com/5Kgaq.jpg?s=192&g=1"
+              src="https://res.cloudinary.com/beeyou/image/upload/v1641721299/logo/avatar7_jkzd2h.png"
               alt=""
-              className="avatar"
             />
+            <div className="avatar-title">
+              <span>Xin chào,</span>
+              <br />
+              <span style={{ fontWeight: "bold" }}>Nguyễn Văn Hồng</span>
+            </div>
           </div>
+          <Dropdown overlay={menu} placement="bottomLeft" arrow>
+            <ArrowDropDown />
+          </Dropdown>
         </div>
       </div>
     </div>

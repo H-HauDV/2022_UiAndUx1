@@ -82,7 +82,7 @@ const History = () => {
         <div className="widgets">
           <Widget>
             <h1 className="title">Report current work</h1>
-            <Table columns={columns} dataSource={data} />;
+            <Table columns={columns} dataSource={data} style={{}} />;
           </Widget>
         </div>
       </div>

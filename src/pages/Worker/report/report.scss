@@ -1,11 +1,11 @@
-.form{
-    .title{
-        display: flex;
-        margin:20px;
-        justify-content: center;
-        align-items: center;
-    }
-    form {
+.form {
+  .title {
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  form {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -46,6 +46,6 @@
     }
   }
 }
-.section {
-    font-weight: bold;
-}
+// .section {
+//     font-weight: bold;
+// }

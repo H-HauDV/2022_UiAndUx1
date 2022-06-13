@@ -31,6 +31,26 @@
     .mission-detail_body {
         padding-left: 50px;
         .mission-detail_overview {
+            padding: 20px 0;
+            .gutter-row {
+                padding: 8px 0;
+                .row-name {
+                    font-size: 1.1rem;
+                }
+
+                .people-name {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    .avatar img {
+                        padding: 4px 2px 0 2px;
+                        height: 24px;
+                        width: 24px;
+                        background-color: #13aec0;
+                        border-radius: 50%;
+                    }
+                }
+            }
         }
         .mission-detail_content {
             h4 {

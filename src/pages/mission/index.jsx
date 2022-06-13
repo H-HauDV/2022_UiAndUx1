@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import FirstSection from "../../components/FirstSection";
 import Section from "../../components/Section";
 import CheckIcon from "@mui/icons-material/Check";
 import "./mission.scss";
-import { Col, Row } from "antd";
+import { Button, Col, Row } from "antd";
 
 export default function MissionPage() {
+  const [isCompleted, setIsCompleted] = useState(false);
   return (
     <>
       <FirstSection />
@@ -15,8 +16,16 @@ export default function MissionPage() {
             <h2 className="mission-detail_title">
               Cắt tỉa cây ở đường Đại Cổ Việt
             </h2>
-            <div className="mission-detail_status">
-              <CheckIcon /> <span>Hoàn thành</span>
+            <div>
+              <Button onClick={() => setIsCompleted(!isCompleted)}>
+                {isCompleted ? (
+                  <span>Đã hoàn thành</span>
+                ) : (
+                  <div className="mission-detail_status">
+                    <CheckIcon /> <span>Hoàn thành</span>
+                  </div>
+                )}
+              </Button>
             </div>
           </div>
           <div className="mission-detail_body">

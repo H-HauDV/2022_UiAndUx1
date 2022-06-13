@@ -3,6 +3,7 @@ import FirstSection from "../../components/FirstSection";
 import Section from "../../components/Section";
 import CheckIcon from "@mui/icons-material/Check";
 import "./mission.scss";
+import { Col, Row } from "antd";
 
 export default function MissionPage() {
   return (
@@ -20,7 +21,79 @@ export default function MissionPage() {
           </div>
           <div className="mission-detail_body">
             <div className="mission-detail_overview">
-              <div></div>
+              <div>
+                <Row gutter={[16, 16]}>
+                  <Col className="gutter-row" span={4}>
+                    <div>
+                      <span className="row-name">Người phụ trách</span>
+                    </div>
+                  </Col>
+                  <Col className="gutter-row" span={8}>
+                    <div className="people-name">
+                      <span className="avatar">
+                        <img
+                          src="https://res.cloudinary.com/beeyou/image/upload/v1641721299/logo/avatar7_jkzd2h.png"
+                          alt=""
+                        />
+                      </span>
+                      <span>Nguyễn Văn Hồng</span>
+                    </div>
+                  </Col>
+                </Row>
+              </div>
+              <div>
+                <Row gutter={[16, 16]}>
+                  <Col className="gutter-row" span={4}>
+                    <div>
+                      <span className="row-name">Thời hạn</span>
+                    </div>
+                  </Col>
+                  <Col className="gutter-row" span={8}>
+                    <div>
+                      <span style={{ fontWeight: 700, color: "#048785" }}>
+                        16:00 PM
+                      </span>
+                      - 5/6/2022
+                    </div>
+                  </Col>
+                </Row>
+              </div>
+              <div>
+                <Row gutter={[16, 16]}>
+                  <Col className="gutter-row" span={4}>
+                    <div>
+                      <span className="row-name">Dự án</span>
+                    </div>
+                  </Col>
+                  <Col className="gutter-row" span={8}>
+                    <div>
+                      <span style={{ fontWeight: 700, color: "#000" }}>
+                        Cây xanh Hà Nội
+                      </span>
+                    </div>
+                  </Col>
+                </Row>
+              </div>
+              <div>
+                <Row gutter={[16, 16]}>
+                  <Col className="gutter-row" span={4}>
+                    <div>
+                      <span className="row-name">Liên hệ công việc</span>
+                    </div>
+                  </Col>
+                  <Col className="gutter-row" span={8}>
+                    <div className="people-name">
+                      <span className="avatar">
+                        <img
+                          src="https://res.cloudinary.com/beeyou/image/upload/v1641721299/logo/avatar7_jkzd2h.png"
+                          alt=""
+                        />
+                      </span>
+                      <span>Đoàn Văn Hậu - Đội trưởng đội X</span>
+                    </div>
+                  </Col>
+                </Row>
+              </div>
             </div>
             <div className="mission-detail_content">
               <h4>Mô tả công việc</h4>

@@ -11,18 +11,21 @@
             font-size: 1.8rem;
             font-weight: 600;
         }
-        .mission-detail_status {
-            // border: 1px solid #0b6037;
-            // border-radius: 5px;
-            display: flex;
-            align-items: center;
-            padding: 0 8px;
-            path {
-                color: #0b6037;
+        button {
+            border-radius: 5px;
+            &:hover,
+            &:focus {
+                border-color: #0b6037;
             }
             span {
                 margin-left: 5px;
                 font-weight: 500;
+            }
+            .mission-detail_complete {
+                color: #fff;
+            }
+
+            .mission-detail_uncomplete {
                 color: #0b6037;
             }
         }

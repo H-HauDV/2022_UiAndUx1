@@ -4,7 +4,6 @@ import WorkerReport from "./pages/Worker/report";
 import WorkerHistory from "./pages/Worker/history";
 import ReportDetail from "./pages/Worker/history/detail";
 
-import "antd/dist/antd.min.css";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import LayoutContainer from "./components/layoutContainer";
 import Home from "./pages/Worker/home";

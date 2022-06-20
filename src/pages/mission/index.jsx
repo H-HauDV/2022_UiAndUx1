@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import FirstSection from "../../components/FirstSection";
 import Section from "../../components/Section";
-import CheckIcon from "@mui/icons-material/Check";
+
 import "./mission.scss";
 import { Button, Col, Row } from "antd";
 
@@ -17,13 +17,14 @@ export default function MissionPage() {
               Cắt tỉa cây ở đường Đại Cổ Việt
             </h2>
             <div>
-              <Button onClick={() => setIsCompleted(!isCompleted)}>
+              <Button
+                onClick={() => setIsCompleted(!isCompleted)}
+                style={isCompleted ? { backgroundColor: "#24a567" } : null}
+              >
                 {isCompleted ? (
-                  <span>Đã hoàn thành</span>
+                  <span className="mission-detail_complete">Đã hoàn thành</span>
                 ) : (
-                  <div className="mission-detail_status">
-                    <CheckIcon /> <span>Hoàn thành</span>
-                  </div>
+                  <span className="mission-detail_uncomplete">Hoàn thành</span>
                 )}
               </Button>
             </div>

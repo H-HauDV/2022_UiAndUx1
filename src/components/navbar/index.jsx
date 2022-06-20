@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowDropDown from "@mui/icons-material/ArrowDropDown";
 import { Dropdown, Menu } from "antd";
+import MobiMenu from "../MobiMenu";
 
 const menu = (
   <Menu
@@ -58,6 +59,7 @@ const Navbar = () => {
           <div className="btn-back">
             <ArrowBackIcon onClick={() => navigate(-1)}></ArrowBackIcon>
           </div>
+          <MobiMenu />
           <div className="search">
             <input type="text" placeholder="Search..." />
             <SearchOutlinedIcon />

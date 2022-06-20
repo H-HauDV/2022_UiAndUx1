@@ -59,6 +59,49 @@
             }
         }
     }
+
+    .mission-summary-mobi {
+        width: 300px;
+        display: flex;
+        padding: 10px 20px;
+        border-radius: 8px;
+        justify-content: space-between;
+        align-items: center;
+
+        box-shadow: 0 0 4px 0 rgba(201, 201, 201, 0.47), 3px 3px 4px 0 rgba(201, 201, 201, 0.47);
+        .mission-summary-mobie_progress {
+            height: 100px;
+            width: 100px;
+            margin-right: 20px;
+            .CircularProgressbar-text {
+                font-weight: 700;
+            }
+        }
+        .mission-summary-mobie_content {
+            h2 {
+                font-size: 1rem;
+                font-weight: 700;
+            }
+            p {
+                font-size: 0.875rem;
+                color: #b9b9b9;
+            }
+            .progress-note {
+                display: flex;
+                gap: 0.5rem;
+                align-items: center;
+                .progress-note-color {
+                    height: 0.6rem;
+                    width: 0.6rem;
+                    border-radius: 50%;
+                }
+                .progress-note-name {
+                    font-size: 0.75rem;
+                    color: #b9b9b9;
+                }
+            }
+        }
+    }
 }
 
 .divider {

@@ -1,7 +1,37 @@
+@import "../../style.scss";
+
 .sidebar {
-    //background-color: lightcoral;
-    flex: 1;
     border-right: 0.5px solid rgb(230, 227, 227);
+    @include responsive_320 {
+        display: none;
+    }
+
+    @include responsive_375 {
+        display: none;
+    }
+
+    @include responsive_425 {
+        display: none;
+    }
+
+    @include responsive_768 {
+        display: none;
+    }
+
+    @include responsive_992 {
+        display: none;
+    }
+
+    @include responsive_1024 {
+    }
+
+    @include responsive_1200 {
+    }
+}
+
+.menu {
+    //background-color: lightcoral;
+
     min-height: 100vh;
     background-color: white;
 

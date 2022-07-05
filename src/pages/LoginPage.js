@@ -48,9 +48,9 @@ export default function LoginPage() {
             //   span: 12,
 
             // }}
-            // initialValues={{
-            //   remember: true,
-            // }}
+            initialValues={{
+              remember: true,
+            }}
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
             autoComplete="off"

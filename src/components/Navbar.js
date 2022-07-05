@@ -44,11 +44,11 @@ const Navbar = () => {
               alt=""
             />
             <div className="avatar-title">
-              <span>Xin chào,</span>
-              <br />
               <span
                 style={{ fontWeight: "bold" }}
               >{`${userInfo.lastName} ${userInfo.firstName}`}</span>
+              <br />
+              <span>{userInfo.position}</span>
             </div>
           </div>
           <Tooltip title="Logout">

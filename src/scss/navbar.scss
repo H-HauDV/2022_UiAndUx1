@@ -1,0 +1,63 @@
+@import "./style.scss";
+.navbar {
+    height: 90px;
+    border-bottom: 0.5px solid rgb(231, 228, 228);
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+    justify-content: space-between;
+    padding: 0 10px;
+
+    .search-input {
+        @include responsive_320 {
+            display: none;
+        }
+
+        @include responsive_375 {
+            display: none;
+        }
+
+        @include responsive_425 {
+            display: none;
+        }
+
+        @include responsive_768 {
+            display: none;
+        }
+
+        @include responsive_992 {
+            display: none;
+        }
+
+        .ant-input-search .ant-input-group .ant-input-affix-wrapper:not(:last-child) {
+            border-radius: 8px 0 0 8px;
+        }
+        .ant-input-search > .ant-input-group > .ant-input-group-addon:last-child .ant-input-search-button {
+            border-radius: 0 8px 8px 0;
+        }
+    }
+
+    .last-item {
+        display: flex;
+        align-items: center;
+    }
+    .avatar {
+        display: flex;
+        align-items: center;
+
+        img {
+            padding: 8px 4px 0 4px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #13aec0;
+        }
+        .avatar-title {
+            margin-left: 8px;
+            span {
+                font-size: 1rem;
+            }
+        }
+    }
+}

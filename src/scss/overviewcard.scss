@@ -1,0 +1,51 @@
+.overview-card {
+    padding: 20px 30px 20px 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 4px 0 rgba(201, 201, 201, 0.47), 3px 3px 4px 0 rgba(201, 201, 201, 0.47);
+    position: relative;
+    .overview-card_container {
+        display: flex;
+        
+        border-left: 6px solid transparent;
+        .overview-card_icon {
+            padding: 0px 15px;
+            span {
+                //padding: 5px;
+                display: flex;
+                align-items: center;
+                // border-radius: 50%;
+                svg {
+                    font-size: 2.5rem;
+                }
+            }
+        }
+
+        .overview-card_content {
+            min-height: 50px;
+            .overview-card_name {
+                min-height: 20px;
+
+                span {
+                    font-size: 1.1rem;
+                    line-height: 0.6rem;
+                    font-weight: bold;
+                    
+                }
+            }
+
+            .overview-card_number {
+                font-weight: bold;
+                font-size: 2rem;
+            }
+        }
+        
+    }
+    .card_conner{
+        top: 0px;
+        right: 0px;
+        position: absolute;
+        border-top-right-radius: 8px;
+        height: 40px;
+        width: 60px;
+    }
+}

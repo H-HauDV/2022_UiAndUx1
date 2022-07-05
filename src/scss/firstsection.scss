@@ -1,0 +1,170 @@
+@import "./style.scss";
+.first-section {
+    .mission-summary {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        border-bottom: 1px solid #d9d9d9;
+        .mission-summary_card {
+            display: flex;
+            flex-direction: column;
+            padding: 0 30px;
+            width: 33%;
+
+            .mission-summary_title {
+                font-size: 1rem;
+                font-weight: bold;
+            }
+            .mission-summary_total {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                span {
+                    font-size: 2rem;
+                    font-weight: 600;
+                    color: #000000;
+                }
+
+                .percentage {
+                    display: flex;
+                    align-items: center;
+                    font-size: 1rem;
+                    border-radius: 15px;
+                    height: 25px;
+                    padding: 0 8px 0 6px;
+                    font-weight: 600;
+                    svg {
+                        margin-top: 2px;
+                    }
+
+                    &.positive {
+                        background-color: #a0ff92;
+                        color: #0b6037;
+                        svg {
+                            path {
+                                color: #0b6037;
+                            }
+                        }
+                    }
+                    &.negative {
+                        background-color: #fe807e;
+                        color: #850000;
+                        svg {
+                            path {
+                                color: #850000;
+                            }
+                        }
+                    }
+                }
+            }
+            .mission-summary_time {
+                font-size: 1rem;
+                font-weight: 600;
+            }
+        }
+
+        @include responsive_320 {
+            display: none;
+        }
+
+        @include responsive_375 {
+            display: none;
+        }
+
+        @include responsive_425 {
+            display: none;
+        }
+
+        @include responsive_768 {
+            display: flex;
+        }
+
+        @include responsive_992 {
+            display: flex;
+        }
+
+        @include responsive_1024 {
+            display: flex;
+        }
+
+        @include responsive_1200 {
+            display: flex;
+        }
+    }
+
+    .mission-summary-mobi {
+        padding: 10px 20px;
+        border-radius: 8px;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 0 4px 0 rgba(201, 201, 201, 0.47), 3px 3px 4px 0 rgba(201, 201, 201, 0.47);
+        margin-top: 30px;
+
+        .mission-summary-mobie_progress {
+            height: 100px;
+            width: 100px;
+            margin-right: 20px;
+            .CircularProgressbar-text {
+                font-weight: 700;
+            }
+        }
+        .mission-summary-mobie_content {
+            h2 {
+                font-size: 1rem;
+                font-weight: 700;
+            }
+            p {
+                font-size: 0.875rem;
+                color: #b9b9b9;
+            }
+            .progress-note {
+                display: flex;
+                gap: 0.5rem;
+                align-items: center;
+                .progress-note-color {
+                    height: 0.6rem;
+                    width: 0.6rem;
+                    border-radius: 50%;
+                }
+                .progress-note-name {
+                    font-size: 0.75rem;
+                    color: #b9b9b9;
+                }
+            }
+        }
+
+        @include responsive_320 {
+            display: flex;
+            width: 300px;
+        }
+
+        @include responsive_375 {
+            display: flex;
+        }
+
+        @include responsive_425 {
+            display: flex;
+        }
+
+        @include responsive_768 {
+            display: none;
+        }
+
+        @include responsive_992 {
+            display: none;
+        }
+
+        @include responsive_1024 {
+            display: none;
+        }
+
+        @include responsive_1200 {
+            display: none;
+        }
+    }
+}
+
+.divider {
+    width: 1px;
+    background-color: #d9d9d9;
+}

@@ -1,36 +1,88 @@
-import HomePage from "./pages/home";
-import Login from "./pages/login";
-import WorkerReport from "./pages/Worker/report";
-import WorkerHistory from "./pages/Worker/history";
-import ReportDetail from "./pages/Worker/history/detail";
-
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import UserInfoPage from "./pages/UserInfoPage";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import LayoutContainer from "./components/layoutContainer";
-import Home from "./pages/Worker/home";
-import MissionPage from "./pages/mission";
+import Layout from "./components/Layout";
+import MissionPage from "./pages/MissionPage";
+import { AuthProvider } from "./auth/auth";
+import RequireAuth from "./components/RequireAuth";
+import TimesheetPage from "./pages/TimesheetPage";
+import PageNotFound from "./pages/PageNotFound";
+import ReportsPage from "./pages/ReportPage";
+import ProgressPage from "./pages/ProgressPage";
+import TeamPage from "./pages/TeamPage";
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <LayoutContainer>
-          <Routes>
-            <Route path="/trang-chu" element={<HomePage />}></Route>
-            <Route path="/" element={<Navigate to={"/trang-chu"} />} />
-            <Route path="login" element={<Login />} />
-            <Route path="nhiem-vu" element={<MissionPage />} />
-            <Route path="worker">
-              <Route index element={<Home />} />
-              <Route path="report" element={<WorkerReport />} />
-              <Route path="history">
-                <Route index element={<WorkerHistory />} />
+      <AuthProvider>
+        <BrowserRouter>
+          <Layout>
+            <Routes>
+              <Route
+                path="/trang-chu"
+                element={
+                  <RequireAuth>
+                    <HomePage />
+                  </RequireAuth>
+                }
+              ></Route>
+              <Route path="/" element={<Navigate to={"/trang-chu"} />} />
 
-                <Route path="detail" element={<ReportDetail />} />
-              </Route>
-            </Route>
-          </Routes>
-        </LayoutContainer>
-      </BrowserRouter>
+              <Route
+                path="nhiem-vu"
+                element={
+                  <RequireAuth>
+                    <MissionPage />
+                  </RequireAuth>
+                }
+              />
+              <Route
+                path="thong-tin-ca-nhan"
+                element={
+                  <RequireAuth>
+                    <UserInfoPage />
+                  </RequireAuth>
+                }
+              />
+              <Route
+                path="lich-cham-cong"
+                element={
+                  <RequireAuth>
+                    <TimesheetPage />
+                  </RequireAuth>
+                }
+              />
+              <Route
+                path="/bao-cao"
+                element={
+                  <RequireAuth>
+                    <ReportsPage />
+                  </RequireAuth>
+                }
+              />
+              <Route
+                path="/tien-do"
+                element={
+                  <RequireAuth>
+                    <ProgressPage />
+                  </RequireAuth>
+                }
+              />
+              <Route
+                path="/nhan-vien"
+                element={
+                  <RequireAuth>
+                    <TeamPage />
+                  </RequireAuth>
+                }
+              />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="*" element={<PageNotFound />} />
+            </Routes>
+          </Layout>
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }

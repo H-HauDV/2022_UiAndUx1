@@ -4,6 +4,7 @@ const users = [
     password: "123",
     firstName: "Hồng",
     lastName: "Nguyễn Văn",
+    position: "Công nhân",
     role: "worker",
   },
   {
@@ -11,6 +12,7 @@ const users = [
     password: "123",
     firstName: "Hồng",
     lastName: "Nguyễn Văn",
+    position: "Đội trưởng đội 1",
     role: "captain",
   },
   {
@@ -18,6 +20,7 @@ const users = [
     password: "123",
     firstName: "Hồng",
     lastName: "Nguyễn Văn",
+    position: "Quản lý",
     role: "manage",
   },
 ];

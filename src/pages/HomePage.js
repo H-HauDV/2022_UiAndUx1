@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import CalendarComp from "../components/CalendarComp";
 import Featured from "../components/Featured";
 import "../scss/home.scss";
@@ -11,6 +11,9 @@ import {
   ClockCircleTwoTone,
   CloseCircleTwoTone,
 } from "@ant-design/icons";
+import Chart from "../components/Chart";
+import { DataContext } from "../store/GlobalState";
+import AttendanceReport from "../components/AttendanceReport";
 const { TabPane } = Tabs;
 const mission = [
   {
@@ -31,9 +34,23 @@ const mission = [
 ];
 
 const HomePage = () => {
+  const { state } = useContext(DataContext);
+  const { userInfo } = state;
+  // const firstSection = () => {
+  //   if (userInfo.role === "worker") {
+  //     return <FirstSection />;
+  //   } else if (userInfo.role === "captain") {
+  //     return;
+  //   } else if (userInfo.role === "manage") {
+  //     return <FirstSection />;
+  //   } else {
+  //     return null;
+  //   }
+  // };
+
   return (
     <>
-      <FirstSection />
+      <AttendanceReport />
 
       <Section title="Nhiệm vụ">
         <Tabs defaultActiveKey="1" className="mission-tabs">
@@ -86,7 +103,7 @@ const HomePage = () => {
       <Section title="Tiến độ công việc">
         <div className="work-timeline">
           <Featured />
-          {/* <Chart /> */}
+          <Chart />
         </div>
       </Section>
       <Section title="Lịch chấm công">

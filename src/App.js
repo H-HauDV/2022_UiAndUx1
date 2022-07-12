@@ -11,6 +11,7 @@ import PageNotFound from "./pages/PageNotFound";
 import ReportsPage from "./pages/ReportPage";
 import ProgressPage from "./pages/ProgressPage";
 import TeamPage from "./pages/TeamPage";
+import WorkerReport from "./pages/Worker/WorkerReport";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <BrowserRouter>
           <Layout>
             <Routes>
+            <Route path="/worker/1" element={<WorkerReport />}></Route>
               <Route
                 path="/trang-chu"
                 element={

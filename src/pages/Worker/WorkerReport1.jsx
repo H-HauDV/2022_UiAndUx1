@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import WorkerLayout from "./WorkerLayout";
-import { Button, Slider, Row, Col, InputNumber } from "antd";
-import "./workreport.scss"
-const WorkerReport = () => {
-  const [isCompleted, setIsCompleted] = useState(false);
+import {  Slider, Row, Col, InputNumber } from "antd";
+import { GrTasks } from "react-icons/gr";
+import { AiOutlineRight } from "react-icons/ai";
+import "./workreport.scss";
+import { motion } from "framer-motion";
+
+const WorkerReport1 = () => {
+  // const [isCompleted, setIsCompleted] = useState(false);
   const [firstNumber, setFirstNumber] = useState(0);
   const [secondNumber, setSecondNumber] = useState(0);
 
@@ -14,12 +18,21 @@ const WorkerReport = () => {
     setSecondNumber(newValue);
   };
   return (
-    <WorkerLayout title="Báo cáo công việc" active={1}>
+    <WorkerLayout title={"Báo cáo công việc"} active={1}>
       <div className="report-container">
-        <div className="title">Cắt cây trên đường Lý Bạch</div>
+        <div className="title">
+          <GrTasks className="task-icon" />
+          <div className="text">Cắt cây trên đường Lý Bạch</div>
+        </div>
         <div className="list">
-          <div className="work">
-            Số cây cần cắt: 23
+          <motion.div
+            className="work"
+            whileTap={{ scale: 0.95 }}
+          >
+            <div className="work-detail">
+              <AiOutlineRight className="icon" />
+              Số cây cần cắt: <div className="number">23</div>
+            </div>
             <div className="noftification">Hãy chọn số cây bạn đã cắt</div>
             <Row>
               <Col span={12}>
@@ -36,18 +49,26 @@ const WorkerReport = () => {
                   max={23}
                   style={{
                     margin: "0 16px",
+                    fontSize: "24px",
                   }}
                   value={firstNumber}
                   onChange={onFirstChange}
                 />
               </Col>
             </Row>
-            
-          </div>
-          <div className="work">
-            Số tuyến đường cần dọn: 7
-            <div className="noftification">Hãy chọn số tuyến đường bạn đã dọn</div>
+          </motion.div>
+          <motion.div
+            className="work"
+            whileTap={{ scale: 0.95 }}
+          >
+            <div className="work-detail">
+              <AiOutlineRight className="icon" />
+              Số tuyến đường cần dọn: <div className="number">7</div>
+            </div>
 
+            <div className="noftification">
+              Hãy chọn số tuyến đường bạn đã dọn
+            </div>
             <Row>
               <Col span={12}>
                 <Slider
@@ -69,11 +90,11 @@ const WorkerReport = () => {
                 />
               </Col>
             </Row>
-          </div>
+          </motion.div>
         </div>
       </div>
     </WorkerLayout>
   );
 };
 
-export default WorkerReport;
+export default WorkerReport1;

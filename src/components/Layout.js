@@ -8,6 +8,7 @@ const Layout = ({ children }) => {
   const location = useLocation();
 
   if (location.pathname.indexOf("login") > 0) return children;
+  if (location.pathname.indexOf("worker") > 0) return children;
 
   return (
     <div className="main">

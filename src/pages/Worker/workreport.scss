@@ -1,10 +1,55 @@
-.report-container{
-    .title{
-        margin-top: 20px;
+.report-container {
+  .title {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .task-icon {
+      font-size: 24px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+    .text {
+      font-size: 30px;
+    }
+  }
+  .list {
+    margin-top: 10px;
+    margin-left: 20px;
+    .work {
+      border-radius: 20px;
+      border-color: #fab1a0;
+      border-style: solid;
+      margin-bottom: 20px;
+      padding: 10px;
+      position: relative;
+      background-color: #eb4d4b;
+      .work-detail {
         font-size: 24px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: white;
+
+        .icon {
+          font-size: 20px;
+          margin-right: 5px;
+          color: white;
+          stroke: white;
+          fill: white;
+        }
+        .number {
+          margin-left: 5px;
+          color: white;
+
+          font-size: 24px;
+          font-weight: bold;
+        }
+      }
+      .noftification {
+        font-size: 20px;
+        color: white;
+      }
     }
-    .list{
-        margin-top: 20px;
-        margin-left: 20px;
-    }
+  }
 }

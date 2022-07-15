@@ -1,7 +1,7 @@
 import React from "react";
-import WorkerLayout from "./WorkerLayout";
+import WorkerLayout from "../components/WorkerLayout";
 
-import "./workerattendance.scss";
+import "../scss/workerattendance.scss";
 import { Table, Tag } from "antd";
 
 const WorkerAttendance = () => {
@@ -41,11 +41,11 @@ const WorkerAttendance = () => {
       key: "status",
       render: (number) => (
         <>
-          { number == 1 ? (
+          {number === 1 ? (
             <Tag color="#2ecc71">Đi làm</Tag>
           ) : (
             <>
-              {number == -1 ? (
+              {number === -1 ? (
                 <Tag color="#e74c3c">Nghỉ không phép</Tag>
               ) : (
                 <Tag color="#e67e22">Nghỉ có phép</Tag>

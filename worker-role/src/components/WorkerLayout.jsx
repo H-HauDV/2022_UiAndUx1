@@ -1,10 +1,10 @@
 import React from "react";
-import "./workercontainer.scss";
+import "../scss/workercontainer.scss";
 import { Tooltip } from "antd";
 import { motion } from "framer-motion";
 import { AiOutlineLogout } from "react-icons/ai";
 // import { Link } from "react-router-dom";
-import Avatar from "../../img/worker_avatar.png";
+import Avatar from "../img/worker_avatar.png";
 import { useNavigate } from "react-router-dom";
 
 const WorkerLayout = ({ children, title, active }) => {
@@ -12,19 +12,19 @@ const WorkerLayout = ({ children, title, active }) => {
   //Tại sao lại dùng cái này
   // Vì dùng Link nó nối chuỗi url, chắc do cài đặt
   const navigateToLogin = () => {
-    navigate("/worker/login");
+    navigate("/login");
   };
   const navigateToReport = () => {
-    navigate("/worker/report/1");
+    navigate("/report/1");
   };
   const navigateAttendance = () => {
-    navigate("/worker/attendance");
+    navigate("/attendance");
   };
   const navigateViewWork = () => {
-    navigate("/worker/view-work");
+    navigate("/view-work");
   };
   const navigateSupport = () => {
-    navigate("/worker/support");
+    navigate("/support");
   };
   return (
     <div className="worker-container">
@@ -53,7 +53,6 @@ const WorkerLayout = ({ children, title, active }) => {
               whileTap={{ scale: 0.9 }}
               className={active === 2 ? "tab-card-active" : "tab-card"}
               onClick={navigateAttendance}
-
             >
               <p>Xem chấm công</p>
             </motion.div>
@@ -65,7 +64,6 @@ const WorkerLayout = ({ children, title, active }) => {
               whileTap={{ scale: 0.9 }}
               className={active === 3 ? "tab-card-active" : "tab-card"}
               onClick={navigateViewWork}
-
             >
               <p>Xem công việc</p>
             </motion.div>
@@ -77,7 +75,6 @@ const WorkerLayout = ({ children, title, active }) => {
               whileTap={{ scale: 0.9 }}
               className={active === 4 ? "tab-card-active" : "tab-card"}
               onClick={navigateSupport}
-
             >
               <p>Hỗ trợ</p>
             </motion.div>

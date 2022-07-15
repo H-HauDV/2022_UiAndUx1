@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import WorkerLayout from "./WorkerLayout";
-import {  Slider, Row, Col, InputNumber } from "antd";
+import WorkerLayout from "../components/WorkerLayout";
+import { Slider, Row, Col, InputNumber } from "antd";
 import { GrTasks } from "react-icons/gr";
 import { AiOutlineRight } from "react-icons/ai";
-import "./workreport.scss";
+import "../scss/workreport.scss";
 import { motion } from "framer-motion";
 
 const WorkerReport1 = () => {
@@ -25,10 +25,7 @@ const WorkerReport1 = () => {
           <div className="text">Cắt cây trên đường Lý Bạch</div>
         </div>
         <div className="list">
-          <motion.div
-            className="work"
-            whileTap={{ scale: 0.95 }}
-          >
+          <motion.div className="work" whileTap={{ scale: 0.95 }}>
             <div className="work-detail">
               <AiOutlineRight className="icon" />
               Số cây cần cắt: <div className="number">23</div>
@@ -57,10 +54,7 @@ const WorkerReport1 = () => {
               </Col>
             </Row>
           </motion.div>
-          <motion.div
-            className="work"
-            whileTap={{ scale: 0.95 }}
-          >
+          <motion.div className="work" whileTap={{ scale: 0.95 }}>
             <div className="work-detail">
               <AiOutlineRight className="icon" />
               Số tuyến đường cần dọn: <div className="number">7</div>

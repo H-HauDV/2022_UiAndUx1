@@ -1,7 +1,7 @@
 import React from "react";
-import "./workerlogin.scss";
+import "../scss/workerlogin.scss";
 import { BsFillCreditCard2BackFill } from "react-icons/bs";
-import { Button, Checkbox, Form, Input } from "antd";
+import { Button, Form, Input } from "antd";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Tooltip } from "antd";

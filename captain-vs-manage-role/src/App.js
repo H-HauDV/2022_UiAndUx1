@@ -11,13 +11,6 @@ import PageNotFound from "./pages/PageNotFound";
 import ReportsPage from "./pages/ReportPage";
 import ProgressPage from "./pages/ProgressPage";
 import TeamPage from "./pages/TeamPage";
-import {
-  WorkerReport1,
-  WorkerAttendance,
-  WorkerViewWork,
-  WorkerSupport,
-  WorkerLogin,
-} from "./pages/Worker/";
 
 function App() {
   return (
@@ -26,26 +19,6 @@ function App() {
         <BrowserRouter>
           <Layout>
             <Routes>
-            <Route
-                path="/worker/login"
-                element={<WorkerLogin />}
-              ></Route>
-              <Route
-                path="/worker/report/1"
-                element={<WorkerReport1 />}
-              ></Route>
-              <Route
-                path="/worker/attendance"
-                element={<WorkerAttendance />}
-              ></Route>
-              <Route
-                path="/worker/view-work"
-                element={<WorkerViewWork />}
-              ></Route>
-              <Route
-                path="/worker/support"
-                element={<WorkerSupport />}
-              ></Route>
               <Route
                 path="/trang-chu"
                 element={

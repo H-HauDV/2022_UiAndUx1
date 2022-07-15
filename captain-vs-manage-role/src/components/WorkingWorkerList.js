@@ -1,19 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import "../scss/workingworkerlist.scss";
-import { Space, Table, Tag } from "antd";
+import { Table, Tag } from "antd";
 const WorkingWorkerList = () => {
-  const [bottom, setBottom] = useState("bottomCenter");
   const columns = [
     {
       title: "STT",
-      dataIndex: "stt",
+      dataIndex: "key",
       key: "stt",
     },
     {
       title: "Họ và tên",
       dataIndex: "name",
       key: "name",
-      render: (text) => <a>{text}</a>,
+      render: (text) => <>{text}</>,
     },
     {
       title: "Trạng thái",
@@ -39,33 +38,26 @@ const WorkingWorkerList = () => {
     },
   ];
   const data = [
-    {
-      stt: "1",
-
-      name: "Đoàn Văn Hậu",
-      tags: ["Đi làm"],
-    },
-    {
-      stt: "2",
-      name: "Nguyễn Văn Hồng",
-      tags: ["Nghỉ"],
-    },
-    {
-      stt: "3",
-      name: "Phạm Thành Long",
-      tags: ["Đi làm"],
-    },
+    { key: "1", name: "Đoàn Văn Hậu", tags: ["Đi làm"] },
+    { key: "2", name: "Nguyễn Văn Hồng", tags: ["Nghỉ"] },
+    { key: "3", name: "Phạm Thành Long", tags: ["Đi làm"] },
+    { key: "4", name: "Phạm Thành Long", tags: ["Đi làm"] },
+    { key: "5", name: "Phạm Thành Long", tags: ["Đi làm"] },
+    { key: "6", name: "Phạm Thành Long", tags: ["Đi làm"] },
+    { key: "7", name: "Phạm Thành Long", tags: ["Đi làm"] },
+    { key: "8", name: "Phạm Thành Long", tags: ["Đi làm"] },
   ];
   return (
     <div className="card">
       <div className="title">Danh sách công nhân</div>
       <Table
-        pagination={{
-          position: [bottom],
-        }}
         className="table"
         columns={columns}
         dataSource={data}
+        pagination={false}
+        scroll={{
+          y: 240,
+        }}
       />
       ;
     </div>

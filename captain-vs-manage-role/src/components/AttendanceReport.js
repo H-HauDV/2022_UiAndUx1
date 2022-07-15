@@ -6,7 +6,6 @@ import OverviewCard from "../components/OverViewCard";
 import WorkingAttendChart from "./WorkingAttendChart";
 import WorkingWorkerList from "./WorkingWorkerList";
 
-
 export default function AttendanceReport() {
   const onChange = (date, dateString) => {
     console.log(date, dateString);
@@ -18,7 +17,6 @@ export default function AttendanceReport() {
       </div>
       <div className="attend-row">
         <OverviewCard
-          key={1}
           backgroundColor="#1dd1a1"
           lineColor="#27ae60"
           connerColor="#55efc4"
@@ -27,7 +25,6 @@ export default function AttendanceReport() {
           number={30}
         />
         <OverviewCard
-          key={1}
           backgroundColor="#f9ca24"
           lineColor="#f0932b"
           connerColor="#fff200"
@@ -36,7 +33,6 @@ export default function AttendanceReport() {
           number={28}
         />
         <OverviewCard
-          key={1}
           backgroundColor="#ee5253"
           lineColor="#c23616"
           connerColor="#ff6b6b"
@@ -46,8 +42,8 @@ export default function AttendanceReport() {
         />
       </div>
       <div className="work-timeline">
-        <WorkingAttendChart/>
-        <WorkingWorkerList/>
+        <WorkingAttendChart />
+        <WorkingWorkerList />
       </div>
     </Section>
   );

@@ -1,7 +1,7 @@
 import React from "react";
-import WorkerLayout from "./WorkerLayout";
-import SimpleCard from "../../components/SimpleCard";
-import "./workersupport.scss";
+import WorkerLayout from "../components/WorkerLayout";
+import SimpleCard from "../components/SimpleCard";
+import "../scss/workersupport.scss";
 const WorkerSupport = () => {
   return (
     <WorkerLayout title={"Hỗ trợ"} active={4}>

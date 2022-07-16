@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { Image } from "antd";
-import { captainMenu, workerMenu } from "../app-info/menu-list-data";
+import { captainMenu, workerMenu, managerMenu } from "../app-info/menu-list-data";
 import { DataContext } from "../store/GlobalState";
 
 export default function Menu() {
@@ -10,7 +10,8 @@ export default function Menu() {
 
   let menu;
   if (userInfo.role === "worker") menu = workerMenu;
-  else menu = captainMenu;
+  else if (userInfo.role === "captain") menu = captainMenu;
+  else menu = managerMenu;
 
   return (
     <div className="menu">

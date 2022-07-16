@@ -1,20 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
+
 import "../scss/workerlogin.scss";
 import { BsFillCreditCard2BackFill } from "react-icons/bs";
-import { Button, Form, Input } from "antd";
+import { Button, Form, Input, Tooltip, message  } from "antd";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Tooltip } from "antd";
-
+const key = 'updatable';
+const openMessage = () => {
+  message.loading({
+    content: 'Đăng nhập thành công, bạn sẽ được chuyển tới trang chủ trong 3 giây',
+    key,
+  });
+  setTimeout(() => {
+    message.success({
+      content: 'Chuyển hướng!',
+      key,
+      duration: 2,
+    });
+  }, 2000);
+};
 const WorkerLogin = () => {
   const navigate = useNavigate();
   const navigateToReport = () => {
-    navigate("/worker/report/1");
+    navigate("/report/1");
   };
   const onFinish = (values) => {
-    navigateToReport();
+    openMessage()
+    //navigateToReport();
+    setTimeout(() => {
+      navigateToReport();
+    }, 3000);
   };
-
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };

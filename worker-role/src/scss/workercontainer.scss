@@ -6,6 +6,7 @@
   background-color: #f5f6fa;
   padding-left: 20px;
   padding-right: 20px;
+  
   .row {
     display: grid;
     gap: 30px;
@@ -113,6 +114,26 @@
       .down {
         padding: 5px 20px;
         border-radius: 20px;
+      }
+    }
+  }
+  .ant-modal{
+    .ant-modal-content{
+      .ant-modal-close{
+        display: none;
+      }
+      .ant-modal-body{
+        p{
+          font-size: 24px;
+        }
+      }
+      .ant-modal-footer{
+        .ant-btn-default{
+
+        }
+        .ant-btn-primary{
+          background-color: #24a567;
+        }
       }
     }
   }

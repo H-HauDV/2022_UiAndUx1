@@ -9,13 +9,32 @@ import { motion } from "framer-motion";
 const WorkerReport1 = () => {
   // const [isCompleted, setIsCompleted] = useState(false);
   const [firstNumber, setFirstNumber] = useState(0);
+  const [firstColor, setFirstColor] = useState("#eb4d4b");
+  const [secondColor, setSecondColor] = useState("#eb4d4b");
+
+
   const [secondNumber, setSecondNumber] = useState(0);
 
   const onFirstChange = (newValue) => {
     setFirstNumber(newValue);
+    if (newValue<8){
+      setFirstColor("#eb4d4b")
+    }else if(newValue<16){
+      setFirstColor("#e67e22")
+    }else{
+      setFirstColor("#27ae60")
+    }
   };
   const onSecondChange = (newValue) => {
     setSecondNumber(newValue);
+    if (newValue<3){
+      setSecondColor("#eb4d4b")
+    }else if(newValue<5){
+      setSecondColor("#e67e22")
+    }else{
+      setSecondColor("#27ae60")
+    }
+    
   };
   return (
     <WorkerLayout title={"Báo cáo công việc"} active={1}>
@@ -25,7 +44,7 @@ const WorkerReport1 = () => {
           <div className="text">Cắt cây trên đường Lý Bạch</div>
         </div>
         <div className="list">
-          <motion.div className="work" whileTap={{ scale: 0.95 }}>
+          <motion.div className="work" style={{background:firstColor}} whileTap={{ scale: 0.99 }}>
             <div className="work-detail">
               <AiOutlineRight className="icon" />
               Số cây cần cắt: <div className="number">23</div>
@@ -54,7 +73,7 @@ const WorkerReport1 = () => {
               </Col>
             </Row>
           </motion.div>
-          <motion.div className="work" whileTap={{ scale: 0.95 }}>
+          <motion.div className="work" style={{background:secondColor}}  whileTap={{ scale: 0.99 }}>
             <div className="work-detail">
               <AiOutlineRight className="icon" />
               Số tuyến đường cần dọn: <div className="number">7</div>

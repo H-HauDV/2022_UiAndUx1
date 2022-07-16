@@ -1,18 +1,47 @@
-import React from "react";
+import React, { useState } from 'react';
 import "../scss/workercontainer.scss";
-import { Tooltip } from "antd";
+import { Tooltip, message, Modal } from "antd";
 import { motion } from "framer-motion";
 import { AiOutlineLogout } from "react-icons/ai";
 // import { Link } from "react-router-dom";
 import Avatar from "../img/worker_avatar.png";
 import { useNavigate } from "react-router-dom";
 
+const key = "updatable";
+const openMessage = () => {
+  message.loading({
+    content: "Đăng xuất thành công, bạn sẽ thoát trong 3s giây",
+    key,
+  });
+  setTimeout(() => {
+    message.success({
+      content: "Chuyển hướng!",
+      key,
+      duration: 2,
+    });
+  }, 2000);
+};
+
 const WorkerLayout = ({ children, title, active }) => {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const handleModalOk = () => {
+    setIsModalVisible(false);
+    navigateToLogin()
+  };
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+  const handleModalCancel = () => {
+    setIsModalVisible(false);
+  };
   const navigate = useNavigate();
   //Tại sao lại dùng cái này
   // Vì dùng Link nó nối chuỗi url, chắc do cài đặt
   const navigateToLogin = () => {
-    navigate("/login");
+    openMessage();
+    setTimeout(() => {
+      navigate("/");
+    }, 3000);
   };
   const navigateToReport = () => {
     navigate("/report/1");
@@ -83,7 +112,7 @@ const WorkerLayout = ({ children, title, active }) => {
         <div className="right">
           <div className="up">
             <div className="title">{title}</div>
-            <Tooltip title="Click here to logout">
+            <Tooltip title="Nhấn vào đây để đăng xuất">
               <motion.div
                 className="logo-out"
                 whileHover={{
@@ -91,7 +120,7 @@ const WorkerLayout = ({ children, title, active }) => {
                   transition: { duration: 0.1 },
                 }}
                 whileTap={{ scale: 0.9 }}
-                onClick={navigateToLogin}
+                onClick={showModal}
               >
                 <AiOutlineLogout size={35} />
               </motion.div>
@@ -100,6 +129,18 @@ const WorkerLayout = ({ children, title, active }) => {
           <div className="down">{children}</div>
         </div>
       </div>
+      <Modal
+        className="log-out-modal"
+        visible={isModalVisible}
+        onOk={handleModalOk}
+        onCancel={handleModalCancel}
+        centered
+        closable={false}
+        okText={"Ok"}
+        cancelText={"Không"}
+      >
+        <p>Bạn có chắc chắn muốn đăng xuất?</p>
+      </Modal>
     </div>
   );
 };

@@ -6,6 +6,7 @@ import {
   WorkerViewWork,
   WorkerSupport,
   WorkerLogin,
+  PageNotFound,
 } from "./pages";
 
 function App() {
@@ -13,13 +14,12 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<WorkerLogin />}></Route>
+          <Route path="/" element={<WorkerLogin />}></Route>
           <Route path="/report/1" element={<WorkerReport1 />}></Route>
           <Route path="/attendance" element={<WorkerAttendance />}></Route>
           <Route path="/view-work" element={<WorkerViewWork />}></Route>
           <Route path="/support" element={<WorkerSupport />}></Route>
-
-          {/* <Route path="*" element={<PageNotFound />} /> */}
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </div>

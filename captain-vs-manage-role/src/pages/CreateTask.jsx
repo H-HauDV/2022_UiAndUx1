@@ -1,16 +1,5 @@
 import { MobileTwoTone } from "@ant-design/icons";
-import {
-  Button,
-  Cascader,
-  DatePicker,
-  Form,
-  Input,
-  InputNumber,
-  Radio,
-  Select,
-  Switch,
-  TreeSelect,
-} from "antd";
+import { Cascader, DatePicker, Form, Input, Select } from "antd";
 import React, { useState } from "react";
 import "../scss/createtask.scss";
 import { motion } from "framer-motion";

@@ -11,6 +11,8 @@ import PageNotFound from "./pages/PageNotFound";
 import ReportsPage from "./pages/ReportPage";
 import ProgressPage from "./pages/ProgressPage";
 import TeamPage from "./pages/TeamPage";
+import CreateTask from "./pages/CreateTask";
+
 
 function App() {
   return (
@@ -66,6 +68,14 @@ function App() {
                 element={
                   <RequireAuth>
                     <ProgressPage />
+                  </RequireAuth>
+                }
+              />
+              <Route
+                path="/tao-task"
+                element={
+                  <RequireAuth>
+                    <CreateTask />
                   </RequireAuth>
                 }
               />

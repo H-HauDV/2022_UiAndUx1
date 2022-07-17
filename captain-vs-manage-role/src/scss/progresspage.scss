@@ -1,0 +1,27 @@
+.progress-page-wrapper {
+    min-height: 85vh;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    .progress-page-container {
+      flex: 1;
+      background-color: #f0f4f6;
+      border-radius: 20px;
+      margin-top: 20px;
+      .progress-page-upper {
+        display: flex;
+        flex-direction: column;
+        .progress-page-title {
+          text-align: center;
+          font-size: 30px;
+          padding: 20px 0px;
+          font-weight: 800;
+          color: #27ae60;
+        }
+      }
+      .progress-page-down {
+        
+      }
+    }
+  }
+  

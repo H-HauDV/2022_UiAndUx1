@@ -1,27 +1,66 @@
+@import "./style.scss";
 .progress-page-wrapper {
-    min-height: 85vh;
-    display: -ms-flex;
-    display: -webkit-flex;
-    display: flex;
-    .progress-page-container {
-      flex: 1;
-      background-color: #f0f4f6;
-      border-radius: 20px;
-      margin-top: 20px;
-      .progress-page-upper {
-        display: flex;
-        flex-direction: column;
-        .progress-page-title {
-          text-align: center;
-          font-size: 30px;
-          padding: 20px 0px;
-          font-weight: 800;
-          color: #27ae60;
+  min-height: 85vh;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  .progress-page-container {
+    flex: 1;
+    background-color: #f0f4f6;
+    border-radius: 20px;
+    margin-top: 20px;
+    
+    .progress-page-upper {
+      display: flex;
+      flex-direction: column;
+
+      .progress-page-title {
+        text-align: center;
+        font-size: 30px;
+        padding: 20px 0px;
+        font-weight: 800;
+        color: #27ae60;
+      }
+    }
+    .progress-page-down {
+        padding-left: 50px;
+      .progress-page-general {
+        display: grid;
+        gap: 30px;
+        padding: 10px 50px;
+        @include responsive_320 {
+          grid-template-columns: 1fr;
+        }
+
+        @include responsive_375 {
+          grid-template-columns: 1fr;
+        }
+
+        @include responsive_425 {
+          grid-template-columns: 1fr;
+        }
+
+        @include responsive_768 {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        @include responsive_992 {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        @include responsive_1024 {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        @include responsive_1200 {
+          grid-template-columns: 1fr 1fr;
         }
       }
-      .progress-page-down {
-        
+      .progress-page-small{
+        padding-left: 20px;
+        padding-right: 20px;
+
       }
     }
   }
-  
+}

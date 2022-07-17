@@ -27,11 +27,6 @@ const columns = [
     key: "sdt",
   },
   {
-    title: "Address",
-    dataIndex: "address",
-    key: "address",
-  },
-  {
     title: "Trạng thái",
     key: "status",
     dataIndex: "status",

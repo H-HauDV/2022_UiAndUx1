@@ -1,33 +1,33 @@
 @import "./style.scss";
 
 .mobi-menu {
-    // align-items: center;
-    // justify-content: center;
-    // @include responsive_320 {
-    //     display: flex;
-    // }
+  // align-items: center;
+  // justify-content: center;
+  // @include responsive_320 {
+  //     display: flex;
+  // }
 
-    // @include responsive_375 {
-    //     display: flex;
-    // }
+  // @include responsive_375 {
+  //     display: flex;
+  // }
 
-    // @include responsive_425 {
-    //     display: flex;
-    // }
+  // @include responsive_425 {
+  //     display: flex;
+  // }
 
-    // @include responsive_768 {
-    //     display: flex;
-    // }
+  // @include responsive_768 {
+  //     display: flex;
+  // }
 
-    // @include responsive_992 {
-    //     display: flex;
-    // }
+  // @include responsive_992 {
+  //     display: flex;
+  // }
 
-    @include responsive_1024 {
-        display: none;
-    }
+  @include responsive_1024 {
+    display: none;
+  }
 
-    @include responsive_1200 {
-        display: none;
-    }
+  @include responsive_1200 {
+    display: none;
+  }
 }

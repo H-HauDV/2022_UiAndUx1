@@ -1,6 +1,6 @@
 import React from "react";
 import "../scss/featured.scss";
-import { CircularProgressbar } from "react-circular-progressbar";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { FlagOutlined, MoreOutlined } from "@ant-design/icons";
 const Featured = () => {
@@ -10,9 +10,18 @@ const Featured = () => {
         <h1 className="title">Progress this week</h1>
         <MoreOutlined />
       </div>
-      <div className="bottom">
+      <div className="bottom" style={{flexDirection:"column"}}>
         <div className="featuredChart">
-          <CircularProgressbar value={70} text={"70%"} strokeWidth={5} />
+          <CircularProgressbar
+            value={70}
+            text={"70%"}
+            strokeWidth={5}
+            styles={buildStyles({
+              textColor: "black",
+              pathColor: "#3498db",
+              trailColor: "#ecf0f1",
+            })}
+          />
         </div>
         <p className="title">Work's code</p>
         <p className="amount">2022B.06.WAF1</p>

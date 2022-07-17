@@ -1,0 +1,59 @@
+.team-page-wrapper {
+  min-height: 85vh;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  .team-page-container {
+    flex: 1;
+    background-color: #f0f4f6;
+    border-radius: 20px;
+    margin-top: 20px;
+    .team-page-upper {
+      display: flex;
+      flex-direction: column;
+      .team-page-title {
+        text-align: center;
+        font-size: 30px;
+        padding: 20px 0px;
+        font-weight: 800;
+        color: #27ae60;
+      }
+    }
+    .team-page-down {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      .employees-table {
+        .tag-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .ant-tag {
+          border-radius: 8px;
+          text-align: center;
+          min-width: 100px;
+        }
+        .icon-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .icon {
+            color: #3498db;
+            stroke: #3498db;
+          }
+        }
+        .mission-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .mission-text {
+            color: #27ae60;
+          }
+        }
+      }
+    }
+  }
+}

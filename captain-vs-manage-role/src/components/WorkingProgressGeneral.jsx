@@ -9,7 +9,7 @@ const WorkingProgressGeneral = ({ percent, title, work }) => {
         <h1 className="title">{title}</h1>
       </div>
       <div className="bottom">
-        <div classname="chart-wrapper">
+        <div className="chart-wrapper">
           <div className="featuredChart">
             <CircularProgressbar
               value={percent}
@@ -41,7 +41,6 @@ const WorkingProgressGeneral = ({ percent, title, work }) => {
           </div>
         </div>
       </div>
-      
     </div>
   );
 };

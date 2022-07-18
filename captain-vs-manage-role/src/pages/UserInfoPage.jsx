@@ -1,6 +1,6 @@
 import React from "react";
 import "../scss/userinfo.scss";
-import { Cascader, DatePicker, Form, Input, Select } from "antd";
+import { Form, Input } from "antd";
 
 export default function UserInfoPage() {
   return (
@@ -27,23 +27,23 @@ export default function UserInfoPage() {
             size={"large"}
           >
             <Form.Item label="Địa chỉ email">
-              <Input disabled value={"hong@mail.com"}/>
+              <Input disabled value={"hong@mail.com"} />
             </Form.Item>
             <Form.Item label="Tên đầy đủ">
-              <Input disabled value={"NGUYEN VAN HONG"}/>
+              <Input disabled value={"NGUYEN VAN HONG"} />
             </Form.Item>
             <Form.Item label="Tên hiển thị">
-              <Input disabled value={"Hong.NV2"}/>
+              <Input disabled value={"Hong.NV2"} />
             </Form.Item>
             <Form.Item label="Chức vụ">
-              <Input disabled value={"Quản lý"}/>
+              <Input disabled value={"Quản lý"} />
             </Form.Item>
             <Form.Item label="Địa chỉ">
-              <Input value={"Hà Nội, Hai Bà Trưng"}/>
+              <Input value={"Hà Nội, Hai Bà Trưng"} />
             </Form.Item>
-            
+
             <Form.Item label="Số điện thoại">
-              <Input value={"0167880192"}/>
+              <Input value={"0167880192"} />
             </Form.Item>
           </Form>
           <div className="button-wrapper">

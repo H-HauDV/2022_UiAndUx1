@@ -1,6 +1,5 @@
-import { MobileTwoTone } from "@ant-design/icons";
 import { Cascader, DatePicker, Form, Input, Select } from "antd";
-import React, { useState } from "react";
+import React from "react";
 import "../scss/createtask.scss";
 import { motion } from "framer-motion";
 const { RangePicker } = DatePicker;

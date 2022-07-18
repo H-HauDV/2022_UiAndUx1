@@ -1,11 +1,11 @@
 import React from "react";
 import "../scss/teampage.scss";
 import { GrView } from "react-icons/gr";
-import { Space, Table, Tag } from "antd";
+import { Table, Tag } from "antd";
 const columns = [
   {
     title: "STT",
-    dataIndex: "stt",
+    dataIndex: "key",
     key: "stt",
     render: (text) => <p>{text}</p>,
   },
@@ -23,34 +23,21 @@ const columns = [
   },
   {
     title: "Số điện thoại",
-    dataIndex: "sdt",
-    key: "sdt",
+    dataIndex: "phone",
+    key: "phone",
+    render: (text) => <p>{text}</p>,
   },
   {
     title: "Trạng thái",
-    key: "status",
     dataIndex: "status",
+    key: "status",
     render: (_, { status }) => (
-      <>
-        {status.map((tag) => {
-          let color = "#2ecc71";
-          let text = "Đi làm";
-          if (tag === "0") {
-            color = "#e67e22";
-            text = "Nghỉ có phép";
-          } else if (tag === "-1") {
-            color = "#e74c3c";
-            text = "Nghỉ không phép";
-          }
-          return (
-            <div className="tag-container">
-              <Tag color={color} key={tag}>
-                {text}
-              </Tag>
-            </div>
-          );
-        })}
-      </>
+      <div className="tag-container">
+        {status === 0 ? <Tag color={"#e67e22"}>Nghỉ có phép</Tag> : null}
+
+        {status === 1 ? <Tag color={"#2ecc71"}>Đi làm</Tag> : null}
+        {status === -1 ? <Tag color={"#e74c3c"}>Nghỉ không phép</Tag> : null}
+      </div>
     ),
   },
   {
@@ -67,77 +54,68 @@ const columns = [
     title: "Hoạt động",
     key: "action",
     render: (_, record) => (
-      <div size="middle">
-        <div className="icon-wrapper">
-          <GrView className="icon" size="18px" />
-        </div>
+      <div className="icon-wrapper">
+        <GrView className="icon" size="18px" />
       </div>
     ),
   },
 ];
 const data = [
   {
-    key: "1",
-    stt: "1",
+    key: 1,
     msnv: "20184093",
     name: "Đoàn Văn Hậu",
-    sdt: "0994785226",
+    phone: "0994785226",
     mission: "4/5",
-    status: ["1"],
+    status: 1,
   },
   {
-    key: "2",
-    stt: "2",
+    key: 2,
     msnv: "20184141",
     name: "Phạm Thành Long",
-    sdt: "0617885226",
+    phone: "0617885226",
     mission: "4/5",
-    status: ["0"],
+    status: 0,
   },
   {
-    key: "3",
-    stt: "3",
+    key: 3,
     msnv: "20184159",
     name: "Nguyễn Cảnh Nam",
-    sdt: "0821548597",
+    phone: "0821548597",
     mission: "4/5",
-    status: ["-1"],
+    status: -1,
   },
   {
-    key: "4",
-    stt: "4",
+    key: 4,
     msnv: "20184181",
     name: "Nguyễn Duy Quang",
-    sdt: "0915787666",
+    phone: "0915787666",
     mission: "4/5",
-    status: ["1"],
+    status: 1,
   },
   {
-    key: "5",
-    stt: "5",
+    key: 5,
     msnv: "20184113",
     name: "Nguyễn Văn Hồng",
-    sdt: "0115227889",
+    phone: "0115227889",
     mission: "3/5",
-    status: ["1"],
+    status: 1,
   },
   {
-    key: "6",
-    stt: "6",
+    key: 6,
     msnv: "20184113",
     name: "Nguyễn Văn Hồng",
-    sdt: "0115227889",
+    phone: "0115227889",
     mission: "3/5",
-    status: ["0"],
+    status: 0,
   },
   {
-    key: "7",
-    stt: "7",
+    key: 7,
     msnv: "20184113",
     name: "Nguyễn Văn Hồng",
-    sdt: "0115227889",
+    phone: "0115227889",
     mission: "3/5",
-    status: ["-1"],
+    status: -1,
   },
 ];
 

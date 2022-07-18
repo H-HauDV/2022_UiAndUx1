@@ -12,7 +12,7 @@ import ReportsPage from "./pages/ReportPage";
 import ProgressPage from "./pages/ProgressPage";
 import TeamPage from "./pages/TeamPage";
 import CreateTask from "./pages/CreateTask";
-
+import DeliverMissionPage from "./pages/DeliverMissionPage";
 
 function App() {
   return (
@@ -31,14 +31,25 @@ function App() {
               ></Route>
               <Route path="/" element={<Navigate to={"/trang-chu"} />} />
 
-              <Route
-                path="nhiem-vu"
-                element={
-                  <RequireAuth>
-                    <MissionPage />
-                  </RequireAuth>
-                }
-              />
+              <Route path="nhiem-vu">
+                <Route
+                  path="giao-nhiem-vu"
+                  element={
+                    <RequireAuth>
+                      <DeliverMissionPage />
+                    </RequireAuth>
+                  }
+                />
+                <Route
+                  index
+                  element={
+                    <RequireAuth>
+                      <MissionPage />
+                    </RequireAuth>
+                  }
+                />
+              </Route>
+
               <Route
                 path="thong-tin-ca-nhan"
                 element={

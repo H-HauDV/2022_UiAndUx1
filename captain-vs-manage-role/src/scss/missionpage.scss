@@ -63,3 +63,29 @@
     }
   }
 }
+
+.mission-table {
+  .icon-wrapper {
+    display: flex;
+    gap: 8px;
+    svg {
+      font-size: 18px;
+    }
+
+    .icon-edit {
+      path {
+        color: #eea620;
+      }
+    }
+    .icon-show {
+      path {
+        color: #24a567;
+      }
+    }
+    .icon-delete {
+      path {
+        color: #ff0000;
+      }
+    }
+  }
+}

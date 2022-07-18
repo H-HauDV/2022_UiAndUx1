@@ -31,3 +31,49 @@
     display: none;
   }
 }
+.mobi-menu-container {
+  display: flex;
+  flex-direction: column;
+  .mobi-menu_header {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
+  }
+  .mobi-menu_search {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+  .mobi-menu-main {
+    ul {
+      list-style: none;
+      li {
+        display: flex;
+        padding-right: 30px;
+
+        a {
+          flex: 1;
+          padding: 10px;
+          .anticon {
+            padding-right: 10px;
+          }
+        }
+        .active {
+          flex: 1;
+          background-color: #24a567;
+          border-radius: 15px;
+          padding: 10px;
+          color: white;
+          .anticon {
+            svg {
+              fill: white;
+            }
+          }
+          .link {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

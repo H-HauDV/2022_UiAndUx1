@@ -3,20 +3,21 @@
   -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
   box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
   border-radius: 10px;
-  max-width: 450px;
+  max-width: 600px;
   .upper {
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     color: black;
     padding-left: 10px;
     padding-right: 10px;
     padding: 10px;
-
+    max-height: 60px;
     .title {
       font-size: 20px;
       font-weight: 700;
       color: black;
+      padding-bottom: 30px;
     }
   }
   .bottom {
@@ -27,8 +28,8 @@
     align-items: right;
     gap: 15px;
     .featuredChart {
-      width: 150px;
-      height: 150px;
+      width: 200px;
+      height: 200px;
       .CircularProgressbar-text {
         font-size: 10px;
         font-weight: 800;
@@ -36,6 +37,18 @@
     }
     .right {
       padding-left: 20px;
+      .extra {
+        .text {
+          display: flex;
+          flex-direction: row;
+          .green {
+            color: #37cb95;
+            padding-left: 5px;
+            padding-right: 5px;
+
+          }
+        }
+      }
       .up,
       .down {
         display: flex;

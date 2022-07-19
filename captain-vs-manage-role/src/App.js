@@ -10,6 +10,8 @@ import TimesheetPage from "./pages/TimesheetPage";
 import PageNotFound from "./pages/PageNotFound";
 import ReportsPage from "./pages/ReportPage";
 import ProgressPage from "./pages/ProgressPage";
+import SmallProgressPage from "./pages/SmallProgressPage";
+
 import TeamPage from "./pages/TeamPage";
 import CreateTask from "./pages/CreateTask";
 import DeliverMissionPage from "./pages/DeliverMissionPage";
@@ -88,6 +90,14 @@ function App() {
                 element={
                   <RequireAuth>
                     <ProgressPage />
+                  </RequireAuth>
+                }
+              />
+              <Route
+                path="/tien-do-nho"
+                element={
+                  <RequireAuth>
+                    <SmallProgressPage />
                   </RequireAuth>
                 }
               />

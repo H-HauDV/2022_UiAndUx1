@@ -103,7 +103,7 @@ const HomePage = () => {
       <Section title="Tiến độ công việc">
         <div className="work-timeline">
           <Featured />
-          <Chart />
+          <Chart title={"Attendance in last 5 month"}/>
         </div>
       </Section>
       <Section title="Lịch chấm công">

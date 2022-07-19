@@ -137,8 +137,76 @@
         }
       }
     }
-    .progress-page-down{
-      
+    .progress-page-down {
+      display: grid;
+      gap: 30px;
+      padding: 10px 0px;
+      @include responsive_320 {
+        grid-template-columns: 1fr;
+      }
+
+      @include responsive_375 {
+        grid-template-columns: 1fr;
+      }
+
+      @include responsive_425 {
+        grid-template-columns: 1fr;
+      }
+
+      @include responsive_768 {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include responsive_992 {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include responsive_1024 {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include responsive_1200 {
+        grid-template-columns: 1fr 1fr;
+      }
+      .attend-chart-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .chart-wrapper {
+          max-width: 600px;
+          min-width: 600px;
+        }
+      }
+    }
+    .under {
+      .all-work-chart-wrapper {
+        padding-top: 40px;
+        padding-bottom: 60px;
+        .title{
+          font-size: 24px;
+          font-weight: 800;
+        }
+        
+      }
+      .all-work-table-wrapper {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        .progress-table {
+          .prog-container {
+            display: flex;
+            flex-direction: row;
+            .prog {
+              padding-right: 10px;
+            }
+            .icon-down {
+              color: red;
+            }
+            .icon-up {
+              color: #27ae60;
+            }
+          }
+        }
+      }
     }
   }
 }

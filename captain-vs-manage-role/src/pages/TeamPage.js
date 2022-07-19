@@ -1,7 +1,8 @@
 import React from "react";
 import "../scss/teampage.scss";
-import { GrView } from "react-icons/gr";
+
 import { Table, Tag } from "antd";
+import { EyeOutlined } from "@ant-design/icons";
 const columns = [
   {
     title: "STT",
@@ -55,7 +56,7 @@ const columns = [
     key: "action",
     render: (_, record) => (
       <div className="icon-wrapper">
-        <GrView className="icon" size="18px" />
+        <EyeOutlined />
       </div>
     ),
   },

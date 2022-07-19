@@ -46,7 +46,7 @@ $res_1200: "only screen and (min-width: 1200px)";
 
 * {
   font-size: 14px;
-  color: #5e5e5e;
+  // color: #5e5e5e;
   box-sizing: border-box;
 }
 
@@ -128,4 +128,19 @@ h6 {
     padding-left: 30px;
     padding-top: 18px;
   }
+}
+
+.my-btn {
+  padding: 8px 16px;
+  border-radius: 24px;
+  border: none;
+  color: #fff;
+}
+
+.btn-success {
+  background-color: #048785;
+}
+
+path {
+  fill: currentColor;
 }

@@ -19,11 +19,7 @@ export default function MissionCard({
         style={{ borderColor: lineColor }}
       >
         <div className="mission-card_icon">
-          <span
-          // style={{ color: iconColor, backgroundColor: iconBackgroundColor }}
-          >
-            {icon}
-          </span>
+          <span>{icon}</span>
         </div>
         <div className="mission-card_content">
           <div className="mission-card_name">

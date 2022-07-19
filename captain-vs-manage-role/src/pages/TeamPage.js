@@ -1,6 +1,6 @@
 import React from "react";
 import "../scss/teampage.scss";
-
+import Section from "../components/Section";
 import { Table, Tag } from "antd";
 import { EyeOutlined } from "@ant-design/icons";
 const columns = [
@@ -8,6 +8,7 @@ const columns = [
     title: "STT",
     dataIndex: "key",
     key: "stt",
+    align: "center",
     render: (text) => <p>{text}</p>,
   },
   {
@@ -45,6 +46,7 @@ const columns = [
     title: "Tiến độ(số nhiệm vụ)",
     dataIndex: "mission",
     key: "mission",
+    align: "center",
     render: (text) => (
       <div className="mission-wrapper">
         <div className="mission-text">{text}</div>
@@ -54,9 +56,10 @@ const columns = [
   {
     title: "Hoạt động",
     key: "action",
+    align: "center",
     render: (_, record) => (
       <div className="icon-wrapper">
-        <EyeOutlined />
+        <EyeOutlined style={{ color: "#eea620" }} />
       </div>
     ),
   },
@@ -122,21 +125,8 @@ const data = [
 
 export default function TeamPage() {
   return (
-    <div>
-      <div className="team-page-wrapper">
-        <div className="team-page-container">
-          <div className="team-page-upper">
-            <div className="team-page-title">Danh sách nhân viên</div>
-          </div>
-          <div className="team-page-down">
-            <Table
-              className="employees-table"
-              columns={columns}
-              dataSource={data}
-            />
-          </div>
-        </div>
-      </div>
-    </div>
+    <Section title="Danh sách nhân viên đội 1">
+      <Table className="employees-table" columns={columns} dataSource={data} />
+    </Section>
   );
 }

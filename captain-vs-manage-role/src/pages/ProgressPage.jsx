@@ -3,9 +3,9 @@ import "../scss/progresspage.scss";
 import Section from "../components/Section";
 import { Tabs } from "antd";
 import {
-  CheckCircleTwoTone,
-  ClockCircleTwoTone,
-  CloseCircleTwoTone,
+  CheckCircleOutlined,
+  ClockCircleOutlined,
+  CloseCircleOutlined,
 } from "@ant-design/icons";
 import MissionCard from "../components/MissionCard";
 import WorkingProgressGeneral from "../components/WorkingProgressGeneral";
@@ -33,9 +33,9 @@ export default function ProgressPage() {
       {" "}
       <div className="progress-page-wrapper">
         <div className="progress-page-container">
-          <div className="progress-page-upper">
+          {/* <div className="progress-page-upper">
             <div className="progress-page-title">Tiến độ</div>
-          </div>
+          </div> */}
           <div className="progress-page-down">
             <div className="progress-page-general">
               <WorkingProgressGeneral
@@ -59,10 +59,11 @@ export default function ProgressPage() {
                           key={index}
                           data={item}
                           lineColor="#048785"
-                          icon={<ClockCircleTwoTone twoToneColor="#048785" />}
+                          icon={
+                            <ClockCircleOutlined style={{ color: "#048785" }} />
+                          }
                           iconBackgroundColor="#f1f1f1"
                           timeEndColor="#048785"
-                          backgroundColor="#ffffff"
                         />
                       ))}
                     </div>
@@ -74,7 +75,9 @@ export default function ProgressPage() {
                           key={index}
                           data={item}
                           lineColor="#38CEBE"
-                          icon={<CheckCircleTwoTone twoToneColor="#00CD88" />}
+                          icon={
+                            <CheckCircleOutlined style={{ color: "#00CD88" }} />
+                          }
                           descriptionColor="#048785"
                           backgroundColor="#C9F9EB"
                           timeEndColor="#048785"
@@ -89,7 +92,9 @@ export default function ProgressPage() {
                           key={index}
                           data={item}
                           lineColor="#E27B7B"
-                          icon={<CloseCircleTwoTone twoToneColor="#FE807E" />}
+                          icon={
+                            <CloseCircleOutlined style={{ color: "#FE807E" }} />
+                          }
                           titleColor="#850000"
                           backgroundColor="#FEEAEA"
                           timeEndColor="#EF5656"

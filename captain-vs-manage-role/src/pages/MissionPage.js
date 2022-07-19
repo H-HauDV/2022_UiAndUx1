@@ -252,6 +252,7 @@ export default function MissionPage() {
       title: "STT",
       dataIndex: "key",
       key: "stt",
+      align: "center",
       render: (text) => <p>{text}</p>,
     },
     {
@@ -276,6 +277,7 @@ export default function MissionPage() {
     {
       title: "Hoạt động",
       key: "action",
+      align: "center",
       render: (_, record) => (
         <div className="icon-wrapper">
           <EyeOutlined

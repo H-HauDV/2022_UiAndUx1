@@ -1,7 +1,5 @@
 .team-page-wrapper {
   min-height: 85vh;
-  display: -ms-flex;
-  display: -webkit-flex;
   display: flex;
   .team-page-container {
     flex: 1;
@@ -36,15 +34,7 @@
           text-align: center;
           min-width: 100px;
         }
-        .icon-wrapper {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          .icon {
-            color: #3498db;
-            stroke: #3498db;
-          }
-        }
+
         .mission-wrapper {
           display: flex;
           align-items: center;

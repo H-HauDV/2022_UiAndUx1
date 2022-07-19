@@ -3,7 +3,8 @@
   -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
   box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
   border-radius: 10px;
-  max-width: 450px;
+  max-width: 565px;
+
   background-color: white;
 
   .upper {
@@ -16,9 +17,10 @@
     padding: 10px;
 
     .title {
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 500;
       color: gray;
+      padding-top: 50px;
     }
   }
   .bottom {
@@ -28,8 +30,8 @@
     gap: 15px;
     .chart-wrapper {
       .featuredChart {
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
         .CircularProgressbar-text {
           font-size: 10px;
           font-weight: 800;

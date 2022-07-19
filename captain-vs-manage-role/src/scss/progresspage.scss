@@ -1,12 +1,11 @@
 @import "./style.scss";
-.progress-page-wrapper {
+.captain-progress-page-wrapper {
   min-height: 85vh;
   display: -ms-flex;
   display: -webkit-flex;
   display: flex;
   .progress-page-container {
     flex: 1;
-
     border-radius: 20px;
     margin-top: 20px;
 
@@ -15,19 +14,61 @@
       flex-direction: column;
 
       .progress-page-title {
-        text-align: center;
         font-size: 30px;
         padding: 20px 0px;
         font-weight: 800;
         color: #27ae60;
+      }
+      .progress-page-description {
+        font-size: 16px;
+        padding: 0px 20px;
+        font-weight: 500;
       }
     }
     .progress-page-down {
       padding-left: 50px;
       .progress-page-general {
         display: grid;
+        gap: 0px;
+        padding: 10px 0px;
+        @include responsive_320 {
+          grid-template-columns: 1fr;
+        }
+
+        @include responsive_375 {
+          grid-template-columns: 1fr;
+        }
+
+        @include responsive_425 {
+          grid-template-columns: 1fr;
+        }
+
+        @include responsive_768 {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        @include responsive_992 {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        @include responsive_1024 {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        @include responsive_1200 {
+          grid-template-columns: 1fr 1fr;
+        }
+        .prog-card-wrapper-1 {
+          display: grid;
+          gap: 30px;
+          padding: 10px 15px;
+          padding-right: 0px;
+        }
+      }
+      .progress-page-small {
+        display: grid;
         gap: 30px;
-        padding: 10px 50px;
+        padding: 10px 0px;
         @include responsive_320 {
           grid-template-columns: 1fr;
         }
@@ -56,10 +97,48 @@
           grid-template-columns: 1fr 1fr;
         }
       }
-      .progress-page-small {
-        padding-left: 20px;
-        padding-right: 20px;
+    }
+  }
+}
+.manager-progress-page-wrapper {
+  min-height: 85vh;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  .progress-page-container {
+    flex: 1;
+    border-radius: 20px;
+    margin-top: 20px;
+    .progress-page-upper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .progress-page-title {
+        font-size: 30px;
+        padding: 0px 0px;
+        font-weight: 800;
+        color: #27ae60;
       }
+      .progress-page-calender {
+        font-size: 16px;
+        .ant-picker {
+          border: none;
+          max-width: 50px;
+          .anticon {
+            svg {
+              font-size: 20px;
+              fill: #27ae60;
+              color: black;
+            }
+          }
+        }
+        input {
+          visibility: hidden;
+        }
+      }
+    }
+    .progress-page-down{
+      
     }
   }
 }

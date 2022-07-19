@@ -1,0 +1,50 @@
+.prog-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 0 4px 0 rgba(201, 201, 201, 0.47),
+    3px 3px 4px 0 rgba(201, 201, 201, 0.47);
+  padding: 20px;
+  .up {
+    .title {
+      font-weight: 800;
+    }
+    padding-bottom: 20px;
+  }
+  .down {
+    display: flex;
+    flex-direction: row;
+
+    .left {
+      max-width: 120px;
+      margin-right: 20px;
+    }
+    .right {
+      display: flex;
+        flex-direction: column;
+      justify-content: center;
+      .text-up {
+        font-weight: 700;
+      }
+      .text-mid {
+        display: flex;
+        flex-direction: row;
+        color: #7f8c8d;
+        .green {
+          padding-left: 5px;
+          padding-right: 5px;
+          color: #24a567;
+          font-weight: 600;
+        }
+      }
+      .text-down {
+        display: flex;
+        flex-direction: row;
+        cursor: pointer;
+        .icon {
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}

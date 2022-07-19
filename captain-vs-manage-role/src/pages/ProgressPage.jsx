@@ -1,113 +1,98 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../scss/progresspage.scss";
-import Section from "../components/Section";
-import { Tabs } from "antd";
-import {
-  CheckCircleOutlined,
-  ClockCircleOutlined,
-  CloseCircleOutlined,
-} from "@ant-design/icons";
-import MissionCard from "../components/MissionCard";
+import { DataContext } from "../store/GlobalState";
+import ProgressCard from "../components/ProgressCard";
+import ManagerWorkingProgress from "../components/ManagerWorkingProgress"
+import { DatePicker } from "antd";
 import WorkingProgressGeneral from "../components/WorkingProgressGeneral";
-const { TabPane } = Tabs;
-const mission = [
-  {
-    name: "Cắt tỉa cây ở đường Đại Cồ Việt",
-    description: "Cắt tỉa lại, tưới 50 cây ...",
-    timeEnd: "16:00 PM",
-  },
-  {
-    name: "Cắt tỉa cây ở đường Đại Cồ Việt",
-    description: "Cắt tỉa lại, tưới 50 cây ...",
-    timeEnd: "16:00 PM",
-  },
-  {
-    name: "Cắt tỉa cây ở đường Đại Cồ Việt",
-    description: "Cắt tỉa lại, tưới 50 cây ...",
-    timeEnd: "16:00 PM",
-  },
-];
+
 export default function ProgressPage() {
+  const { state } = useContext(DataContext);
+  const { userInfo } = state;
   return (
     <div>
-      {" "}
-      <div className="progress-page-wrapper">
-        <div className="progress-page-container">
-          {/* <div className="progress-page-upper">
-            <div className="progress-page-title">Tiến độ</div>
-          </div> */}
-          <div className="progress-page-down">
-            <div className="progress-page-general">
-              <WorkingProgressGeneral
-                title="Tiến độ tổng"
-                percent={80}
-                work={"4/5"}
-              />
-              <WorkingProgressGeneral
-                title="Tiến độ tháng này"
-                percent={66.6}
-                work={"6/9"}
-              />
-            </div>
-            <div className="progress-page-small">
-              <Section title="Nhiệm vụ tháng này">
-                <Tabs defaultActiveKey="1" className="mission-tabs">
-                  <TabPane tab="Chưa hoàn thành" key="1">
-                    <div className="job-overview">
-                      {mission.map((item, index) => (
-                        <MissionCard
-                          key={index}
-                          data={item}
-                          lineColor="#048785"
-                          icon={
-                            <ClockCircleOutlined style={{ color: "#048785" }} />
-                          }
-                          iconBackgroundColor="#f1f1f1"
-                          timeEndColor="#048785"
-                        />
-                      ))}
-                    </div>
-                  </TabPane>
-                  <TabPane tab="Đã hoàn thành" key="2">
-                    <div className="job-overview">
-                      {mission.map((item, index) => (
-                        <MissionCard
-                          key={index}
-                          data={item}
-                          lineColor="#38CEBE"
-                          icon={
-                            <CheckCircleOutlined style={{ color: "#00CD88" }} />
-                          }
-                          descriptionColor="#048785"
-                          backgroundColor="#C9F9EB"
-                          timeEndColor="#048785"
-                        />
-                      ))}
-                    </div>
-                  </TabPane>
-                  <TabPane tab="Quá hạn" key="3">
-                    <div className="job-overview">
-                      {mission.map((item, index) => (
-                        <MissionCard
-                          key={index}
-                          data={item}
-                          lineColor="#E27B7B"
-                          icon={
-                            <CloseCircleOutlined style={{ color: "#FE807E" }} />
-                          }
-                          titleColor="#850000"
-                          backgroundColor="#FEEAEA"
-                          timeEndColor="#EF5656"
-                        />
-                      ))}
-                    </div>
-                  </TabPane>
-                </Tabs>
-              </Section>
+      {userInfo.role === "captain" ? (
+        <>
+          <div className="captain-progress-page-wrapper">
+            <div className="progress-page-container">
+              <div className="progress-page-upper">
+                <div className="progress-page-title">Tiến độ công việc</div>
+                <div className="progress-page-description">
+                  Tiến độ đến thời điểm hiện tại (30/05/2022 - 30/06/2022)
+                </div>
+              </div>
+              <div className="progress-page-down">
+                <div className="progress-page-general">
+                  <div className="chart-wrapper">
+                    <WorkingProgressGeneral
+                      title="Tiến độ tổng"
+                      percent={80}
+                      work={"4/5"}
+                    />
+                  </div>
+
+                  <div className="prog-card-wrapper-1">
+                    <ProgressCard
+                      title="Cắt tỉa cây từ hết đường Đại Cồ Việt đến hết Lê Duẩn"
+                      percent={100}
+                      min={10}
+                      max={10}
+                    />
+                    <ProgressCard
+                      title="Cắt tỉa cây từ phố đi bộ đến hết Bà Triệu"
+                      percent={100}
+                      min={10}
+                      max={10}
+                    />
+                  </div>
+                </div>
+                <div className="progress-page-small">
+                  <ProgressCard
+                    title="Cắt tỉa cây từ hết đường Đại Cồ Việt đến hết Lê Duẩn"
+                    percent={100}
+                    min={10}
+                    max={10}
+                  />
+                  <ProgressCard
+                    title="Cắt tỉa cây từ phố đi bộ đến hết Bà Triệu"
+                    percent={100}
+                    min={10}
+                    max={10}
+                  />
+                  <ProgressCard
+                    title="Cắt tỉa cây từ phố đi bộ đến hết Bà Triệu"
+                    percent={100}
+                    min={10}
+                    max={10}
+                  />
+                  <ProgressCard
+                    title="Cắt tỉa cây từ phố đi bộ đến hết Bà Triệu"
+                    percent={100}
+                    min={10}
+                    max={10}
+                  />
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </>
+      ) : (
+        <>
+          <div className="manager-progress-page-wrapper">
+            <div className="progress-page-container">
+              <div className="progress-page-upper">
+                <div className="progress-page-title">Tiến độ</div>
+                <div className="progress-page-calender">
+                  <DatePicker />
+                </div>
+              </div>
+              <div className="progress-page-down">
+                <ManagerWorkingProgress/>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }

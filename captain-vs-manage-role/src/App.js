@@ -31,21 +31,20 @@ function App() {
                 }
               ></Route>
               <Route path="/" element={<Navigate to={"/trang-chu"} />} />
-
+              <Route
+                path="tao-task"
+                element={
+                  <RequireAuth>
+                    <CreateTask />
+                  </RequireAuth>
+                }
+              />
               <Route path="nhiem-vu">
                 <Route
                   path=":id"
                   element={
                     <RequireAuth>
                       <MissionDetailPage />
-                    </RequireAuth>
-                  }
-                />
-                <Route
-                  path="giao-nhiem-vu"
-                  element={
-                    <RequireAuth>
-                      <CreateTask />
                     </RequireAuth>
                   }
                 />

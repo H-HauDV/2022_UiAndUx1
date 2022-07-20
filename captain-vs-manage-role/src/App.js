@@ -71,14 +71,6 @@ function App() {
                 }
               />
               <Route
-                path="thong-tin-nhan-vien"
-                element={
-                  <RequireAuth>
-                    <SmallInforPage />
-                  </RequireAuth>
-                }
-              />
-              <Route
                 path="lich-cham-cong"
                 element={
                   <RequireAuth>
@@ -117,6 +109,14 @@ function App() {
                   element={
                     <RequireAuth>
                       <TeamDetailPage />
+                    </RequireAuth>
+                  }
+                />
+                <Route
+                  path="thanh-vien"
+                  element={
+                    <RequireAuth>
+                      <SmallInforPage />
                     </RequireAuth>
                   }
                 />

@@ -5,6 +5,7 @@ import { Table, Tag } from "antd";
 import { EyeOutlined } from "@ant-design/icons";
 import { DataContext } from "../store/GlobalState";
 import PageNotFound from "./PageNotFound";
+import { Link } from "react-router-dom";
 const membersListcolumns = [
   {
     title: "STT",
@@ -67,7 +68,10 @@ const membersListcolumns = [
     align: "center",
     render: (_, record) => (
       <div className="icon-wrapper">
-        <EyeOutlined style={{ color: "#eea620" }} />
+        <Link to="/nhan-vien/thanh-vien">
+          {" "}
+          <EyeOutlined style={{ color: "#eea620" }} />
+        </Link>
       </div>
     ),
   },

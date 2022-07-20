@@ -3,7 +3,7 @@ import FirstSection from "../components/FirstSection";
 import Section from "../components/Section";
 import { Link, useNavigate } from "react-router-dom";
 import "../scss/missionpage.scss";
-import { Popconfirm, Table, Tabs, message } from "antd";
+import { Popconfirm, Table, Tabs, message, Tag } from "antd";
 import {
   DeleteOutlined,
   EditOutlined,
@@ -800,6 +800,268 @@ const captainDataOutDate = [
     ),
   },
 ];
+const manageData = [
+  {
+    key: 1,
+    mission: "Cắt tỉa cây ở đường Đại Cồ Việt",
+    address: "Đại Cồ Việt",
+    timeEnd: (
+      <p>
+        <span style={{ color: "#048785", fontWeight: 700 }}>16:00 PM</span>{" "}
+        <span>- 5/6/2022</span>
+      </p>
+    ),
+    team: "Đội 1",
+    status: "1",
+  },
+  {
+    key: 2,
+    mission: "Cắt tỉa cây ở đường Đại Cồ Việt",
+    address: "Đại Cồ Việt",
+    timeEnd: (
+      <p>
+        <span style={{ color: "#048785", fontWeight: 700 }}>16:00 PM</span>{" "}
+        <span>- 5/6/2022</span>
+      </p>
+    ),
+    team: "Đội 1",
+    status: "0",
+  },
+  {
+    key: 3,
+    mission: "Cắt tỉa cây ở đường Đại Cồ Việt",
+    address: "Đại Cồ Việt",
+    timeEnd: (
+      <p>
+        <span style={{ color: "#048785", fontWeight: 700 }}>16:00 PM</span>{" "}
+        <span>- 5/6/2022</span>
+      </p>
+    ),
+    team: "Đội 1",
+    status: "-1",
+  },
+  {
+    key: 4,
+    mission: "Cắt tỉa cây ở đường Đại Cồ Việt",
+    address: "Đại Cồ Việt",
+    timeEnd: (
+      <p>
+        <span style={{ color: "#048785", fontWeight: 700 }}>16:00 PM</span>{" "}
+        <span>- 5/6/2022</span>
+      </p>
+    ),
+    team: "Đội 1",
+    status: "1",
+  },
+  {
+    key: 5,
+    mission: "Cắt tỉa cây ở đường Đại Cồ Việt",
+    address: "Đại Cồ Việt",
+    timeEnd: (
+      <p>
+        <span style={{ color: "#048785", fontWeight: 700 }}>16:00 PM</span>{" "}
+        <span>- 5/6/2022</span>
+      </p>
+    ),
+    team: "Đội 1",
+    status: "1",
+  },
+  {
+    key: 6,
+    mission: "Cắt tỉa cây ở đường Đại Cồ Việt",
+    address: "Đại Cồ Việt",
+    timeEnd: (
+      <p>
+        <span style={{ color: "#048785", fontWeight: 700 }}>16:00 PM</span>{" "}
+        <span>- 5/6/2022</span>
+      </p>
+    ),
+    team: "Đội 1",
+    status: "1",
+  },
+  {
+    key: 7,
+    mission: "Cắt tỉa cây ở đường Đại Cồ Việt",
+    address: "Đại Cồ Việt ",
+    timeEnd: (
+      <p>
+        <span style={{ color: "#048785", fontWeight: 700 }}>16:00 PM</span>{" "}
+        <span>- 5/6/2022</span>
+      </p>
+    ),
+    team: "Đội 1",
+    status: "1",
+  },
+  {
+    key: 8,
+    mission: "Cắt tỉa cây ở đường Đại Cồ Việt",
+    address: "Đại Cồ Việt ",
+    timeEnd: (
+      <p>
+        <span style={{ color: "#048785", fontWeight: 700 }}>16:00 PM</span>{" "}
+        <span>- 5/6/2022</span>
+      </p>
+    ),
+    team: "Đội 1",
+    status: "1",
+  },
+  {
+    key: 9,
+    mission: "Cắt tỉa cây ở đường Đại Cồ Việt",
+    address: "Đại Cồ Việt ",
+    timeEnd: (
+      <p>
+        <span style={{ color: "#048785", fontWeight: 700 }}>16:00 PM</span>{" "}
+        <span>- 5/6/2022</span>
+      </p>
+    ),
+    team: "Đội 1",
+    status: "1",
+  },
+  {
+    key: 10,
+    mission: "Cắt tỉa cây ở đường Đại Cồ Việt",
+    address: "Đại Cồ Việt ",
+    timeEnd: (
+      <p>
+        <span style={{ color: "#048785", fontWeight: 700 }}>16:00 PM</span>{" "}
+        <span>- 5/6/2022</span>
+      </p>
+    ),
+    team: "Đội 1",
+    status: "1",
+  },
+  {
+    key: 11,
+    mission: "Cắt tỉa cây ở đường Đại Cồ Việt",
+    address: "Đại Cồ Việt ",
+    timeEnd: (
+      <p>
+        <span style={{ color: "#048785", fontWeight: 700 }}>16:00 PM</span>{" "}
+        <span>- 5/6/2022</span>
+      </p>
+    ),
+    team: "Đội 1",
+    status: "1",
+  },
+  {
+    key: 12,
+    mission: "Cắt tỉa cây ở đường Đại Cồ Việt",
+    address: "Đại Cồ Việt ",
+    timeEnd: (
+      <p>
+        <span style={{ color: "#048785", fontWeight: 700 }}>16:00 PM</span>{" "}
+        <span>- 5/6/2022</span>
+      </p>
+    ),
+    team: "Đội 1",
+    status: "1",
+  },
+  {
+    key: 13,
+    mission: "Cắt tỉa cây ở đường Đại Cồ Việt",
+    address: "Đại Cồ Việt ",
+    timeEnd: (
+      <p>
+        <span style={{ color: "#048785", fontWeight: 700 }}>16:00 PM</span>{" "}
+        <span>- 5/6/2022</span>
+      </p>
+    ),
+    team: "Đội 1",
+    status: "1",
+  },
+  {
+    key: 14,
+    mission: "Cắt tỉa cây ở đường Đại Cồ Việt",
+    address: "Đại Cồ Việt ",
+    timeEnd: (
+      <p>
+        <span style={{ color: "#048785", fontWeight: 700 }}>16:00 PM</span>{" "}
+        <span>- 5/6/2022</span>
+      </p>
+    ),
+    team: "Đội 1",
+    status: "1",
+  },
+  {
+    key: 15,
+    mission: "Cắt tỉa cây ở đường Đại Cồ Việt",
+    address: "Đại Cồ Việt ",
+    timeEnd: (
+      <p>
+        <span style={{ color: "#048785", fontWeight: 700 }}>16:00 PM</span>{" "}
+        <span>- 5/6/2022</span>
+      </p>
+    ),
+    team: "Đội 1",
+    status: "1",
+  },
+  {
+    key: 16,
+    mission: "Cắt tỉa cây ở đường Đại Cồ Việt",
+    address: "Đại Cồ Việt ",
+    timeEnd: (
+      <p>
+        <span style={{ color: "#048785", fontWeight: 700 }}>16:00 PM</span>{" "}
+        <span>- 5/6/2022</span>
+      </p>
+    ),
+    team: "Đội 1",
+    status: "1",
+  },
+  {
+    key: 17,
+    mission: "Cắt tỉa cây ở đường Đại Cồ Việt",
+    address: "Đại Cồ Việt ",
+    timeEnd: (
+      <p>
+        <span style={{ color: "#048785", fontWeight: 700 }}>16:00 PM</span>{" "}
+        <span>- 5/6/2022</span>
+      </p>
+    ),
+    team: "Đội 1",
+    status: "1",
+  },
+  {
+    key: 18,
+    mission: "Cắt tỉa cây ở đường Đại Cồ Việt",
+    address: "Đại Cồ Việt ",
+    timeEnd: (
+      <p>
+        <span style={{ color: "#048785", fontWeight: 700 }}>16:00 PM</span>{" "}
+        <span>- 5/6/2022</span>
+      </p>
+    ),
+    team: "Đội 1",
+    status: "1",
+  },
+  {
+    key: 19,
+    mission: "Cắt tỉa cây ở đường Đại Cồ Việt",
+    address: "Đại Cồ Việt ",
+    timeEnd: (
+      <p>
+        <span style={{ color: "#048785", fontWeight: 700 }}>16:00 PM</span>{" "}
+        <span>- 5/6/2022</span>
+      </p>
+    ),
+    team: "Đội 1",
+    status: "1",
+  },
+  {
+    key: 20,
+    mission: "Cắt tỉa cây ở đường Đại Cồ Việt",
+    address: "Đại Cồ Việt ",
+    timeEnd: (
+      <p>
+        <span style={{ color: "#048785", fontWeight: 700 }}>16:00 PM</span>{" "}
+        <span>- 5/6/2022</span>
+      </p>
+    ),
+    team: "Đội 1",
+    status: "1",
+  },
+];
 
 export default function MissionPage() {
   const navigate = useNavigate();
@@ -851,7 +1113,6 @@ export default function MissionPage() {
           <EyeOutlined
             style={{ color: "#eea620" }}
             onClick={() => {
-              console.log(record);
               navigate(`${record.key}`);
             }}
           />
@@ -992,14 +1253,60 @@ export default function MissionPage() {
       render: (text) => <>{text}</>,
     },
     {
-      title: "Trạng thái",
-      dataIndex: "status",
-    },
-    {
       title: "Đội phụ trách",
       dataIndex: "team",
       key: "team",
       render: (text) => <>{text}</>,
+    },
+    {
+      title: "Trạng thái",
+      dataIndex: "status",
+      key: "status",
+      render: (_, { status }) => (
+        <div className="tag-container">
+          {status === "0" ? <Tag color={"#e67e22"}>Chưa xong</Tag> : null}
+
+          {status === "1" ? <Tag color={"#2ecc71"}>Hoàn thành</Tag> : null}
+          {status === "-1" ? <Tag color={"#e74c3c"}>Quá hạn</Tag> : null}
+        </div>
+      ),
+    },
+    {
+      title: "Hành động",
+
+      key: "action",
+      render: (record) => (
+        <div className="icon-wrapper">
+          <EyeOutlined
+            style={{ color: "#eea620" }}
+            onClick={() => {
+              navigate(`${record.key}`);
+            }}
+          />
+          {record.status === "0" && (
+            <>
+              <EditOutlined style={{ color: "#24a567" }} />
+              <Popconfirm
+                title="Bạn có chắc chắn muốn xóa?"
+                icon={
+                  <QuestionCircleOutlined
+                    style={{ fontSize: "16px", color: "red" }}
+                  />
+                }
+                okText="Xóa"
+                cancelText="Hủy"
+                onConfirm={() => {
+                  handleDelete(record.key);
+                  message.success("Xóa thành công");
+                }}
+                okButtonProps={{ danger: true }}
+              >
+                <DeleteOutlined style={{ color: "#ff0000" }} />
+              </Popconfirm>
+            </>
+          )}
+        </div>
+      ),
     },
   ];
 
@@ -1057,8 +1364,8 @@ export default function MissionPage() {
       {userInfo.role === "manage" && (
         <Table
           className="mission-table"
-          columns={captainColumnsOutDate}
-          dataSource={captainDataOutDate}
+          columns={manageColumns}
+          dataSource={manageData}
           style={{ paddingTop: "74px" }}
         />
       )}

@@ -55,9 +55,6 @@ export default function SmallInforPage() {
               <Input value={"Nhân viên tổ 3"} />
             </Form.Item>
           </Form>
-          <div className="button-wrapper">
-            <button className="submit">Xác nhận</button>
-          </div>
         </div>
       </div>
     </div>

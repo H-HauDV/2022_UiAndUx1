@@ -11,6 +11,7 @@ import PageNotFound from "./pages/PageNotFound";
 import ReportsPage from "./pages/ReportPage";
 import ProgressPage from "./pages/ProgressPage";
 import SmallProgressPage from "./pages/SmallProgressPage";
+import SmallInforPage from "./pages/SmallInforPage";
 
 import TeamPage from "./pages/TeamPage";
 import CreateTask from "./pages/CreateTask";
@@ -66,6 +67,14 @@ function App() {
                 element={
                   <RequireAuth>
                     <UserInfoPage />
+                  </RequireAuth>
+                }
+              />
+              <Route
+                path="thong-tin-nhan-vien"
+                element={
+                  <RequireAuth>
+                    <SmallInforPage />
                   </RequireAuth>
                 }
               />

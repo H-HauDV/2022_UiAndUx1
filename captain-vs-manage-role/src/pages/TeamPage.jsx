@@ -66,9 +66,9 @@ const membersListcolumns = [
     key: "action",
     align: "center",
     render: (_, record) => (
-      <div className="icon-wrapper">
+      <Link to="/thong-tin-nhan-vien" className="icon-wrapper">
         <EyeOutlined style={{ color: "#eea620" }} />
-      </div>
+      </Link>
     ),
   },
 ];

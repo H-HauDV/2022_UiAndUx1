@@ -5,6 +5,8 @@ import { Table, Tag } from "antd";
 import { EyeOutlined } from "@ant-design/icons";
 import { DataContext } from "../store/GlobalState";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+
 const membersListcolumns = [
   {
     title: "STT",
@@ -66,7 +68,7 @@ const membersListcolumns = [
     key: "action",
     align: "center",
     render: (_, record) => (
-      <Link to="/thong-tin-nhan-vien" className="icon-wrapper">
+      <Link to="/nhan-vien/thanh-vien" className="icon-wrapper">
         <EyeOutlined style={{ color: "#eea620" }} />
       </Link>
     ),
@@ -231,6 +233,9 @@ const teamListData = [
 export default function TeamPage() {
   const { state } = useContext(DataContext);
   const { userInfo } = state;
+  useEffect(() => {
+    document.title = "Nhân viên";
+  }, []);
   return (
     <>
       {userInfo.role === "captain" && (

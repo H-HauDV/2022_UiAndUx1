@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../scss/pagenotfound.scss";
 
 const PageNotFound = () => {
+  useEffect(() => {
+    document.title = "404";
+  }, []);
   return (
     <>
       <div className="page-not-found">

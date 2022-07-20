@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import WorkerLayout from "../components/WorkerLayout";
 import SimpleCard from "../components/SimpleCard";
 import "../scss/workersupport.scss";
 const WorkerSupport = () => {
+  useEffect(() => {
+    document.title = "Hỗ trợ";
+  }, []);
   return (
     <WorkerLayout title={"Hỗ trợ"} active={4}>
       <div className="content-row">

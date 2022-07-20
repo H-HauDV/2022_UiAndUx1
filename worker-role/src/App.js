@@ -6,6 +6,7 @@ import {
   WorkerViewWork,
   WorkerSupport,
   WorkerLogin,
+  WorkerLoginMobile,
   PageNotFound,
 } from "./pages";
 
@@ -15,6 +16,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<WorkerLogin />}></Route>
+          <Route path="/login-mobile" element={<WorkerLoginMobile />}></Route>
           <Route path="/report/1" element={<WorkerReport1 />}></Route>
           <Route path="/attendance" element={<WorkerAttendance />}></Route>
           <Route path="/view-work" element={<WorkerViewWork />}></Route>

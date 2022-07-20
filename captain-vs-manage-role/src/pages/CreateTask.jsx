@@ -1,5 +1,7 @@
 import { Cascader, DatePicker, Form, Input, Select } from "antd";
 import React from "react";
+import { useEffect } from "react";
+
 import "../scss/createtask.scss";
 import { motion } from "framer-motion";
 const { RangePicker } = DatePicker;
@@ -19,6 +21,9 @@ const CreateTask = () => {
   const handleChange = (value) => {
     console.log(`Selected: ${value}`);
   };
+  useEffect(() => {
+    document.title = "Tạo nhiệm vụ";
+  }, []);
   return (
     <div className="create-task-wrapper">
       <div className="create-task-container">

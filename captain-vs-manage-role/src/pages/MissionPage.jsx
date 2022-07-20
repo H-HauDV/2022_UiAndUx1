@@ -3,6 +3,7 @@ import FirstSection from "../components/FirstSection";
 import Section from "../components/Section";
 import { Link, useNavigate } from "react-router-dom";
 import "../scss/missionpage.scss";
+import { useEffect } from "react";
 import { Popconfirm, Table, Tabs, message, Tag } from "antd";
 import {
   DeleteOutlined,
@@ -1067,7 +1068,9 @@ export default function MissionPage() {
   const navigate = useNavigate();
   const { state } = useContext(DataContext);
   const { userInfo } = state;
-
+  useEffect(() => {
+    document.title = "Nhiệm vụ";
+  }, []);
   const rowSelection = {
     onChange: (selectedRowKeys, selectedRows) => {
       console.log(
@@ -1327,7 +1330,7 @@ export default function MissionPage() {
                     className="my-btn btn-success"
                     to="/nhiem-vu/giao-nhiem-vu"
                   >
-                    Giao nhiệm vụ
+                    Tự động giao nhiệm vụ
                   </Link>
                 </div>
 

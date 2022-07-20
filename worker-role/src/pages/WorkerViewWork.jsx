@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import WorkerLayout from "../components/WorkerLayout";
 import "../scss/workerviewwork.scss";
 import { Button, Col, Row } from "antd";
 const WorkerVIewWork = () => {
+  useEffect(() => {
+    document.title = "Xem công việc";
+  }, []);
   const [isCompleted, setIsCompleted] = useState(false);
   return (
     <WorkerLayout title={"Xem công việc"} active={3}>
@@ -12,16 +15,7 @@ const WorkerVIewWork = () => {
             Cắt tỉa cây ở đường Đại Cổ Việt
           </h2>
           <div>
-            <Button
-              onClick={() => setIsCompleted(!isCompleted)}
-              style={isCompleted ? { backgroundColor: "#24a567" } : null}
-            >
-              {isCompleted ? (
-                <span className="mission-detail_complete">Đã hoàn thành</span>
-              ) : (
-                <span className="mission-detail_uncomplete">Hoàn thành</span>
-              )}
-            </Button>
+            
           </div>
         </div>
         <div className="mission-detail_body">

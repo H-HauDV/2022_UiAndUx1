@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import WorkerLayout from "../components/WorkerLayout";
 import { motion } from "framer-motion";
 
@@ -6,13 +6,23 @@ import "../scss/workerattendance.scss";
 import { Table, Tag } from "antd";
 
 const WorkerAttendance = () => {
+  useEffect(() => {
+    document.title = "Xem chấm công";
+  }, []);
   const data = [
+    {
+      key: "0",
+      date: "14/07/2022",
+      status: 1,
+      workerPercent: "4/5",
+      groupleadPercent: "4/5",
+    },
     {
       key: "1",
       date: "13/07/2022",
       status: 1,
-      workerPercent: "80",
-      groupleadPercent: "90",
+      workerPercent: "4/5",
+      groupleadPercent: "4/5",
     },
     {
       key: "2",

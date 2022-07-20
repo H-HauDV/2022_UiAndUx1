@@ -1,4 +1,4 @@
-.worker-login-wrapper {
+.worker-login-mobile-wrapper {
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -7,14 +7,16 @@
   .worker-login-container {
     background-color: white;
     border-radius: 20px;
-
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     .left {
-      border-bottom-left-radius: 20px;
+      border-top-right-radius: 20px;
       border-top-left-radius: 20px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+
       background: #509d8e;
-      padding: 5px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -23,7 +25,7 @@
       .image {
         padding: 0px 30px;
         .icon {
-          font-size: 450px;
+          font-size: 50px;
         }
       }
       .description {
@@ -34,29 +36,12 @@
     }
     .right {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       padding: 0px 50px;
       flex-direction: column;
       position: relative;
-      .top {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background-color: #74b9ff;
-        border-radius: 9999px;
-        padding: 10px;
-        color: white;
-        cursor: pointer;
-        justify-content: center;
-        .icon {
-          svg {
-            fill: white;
-            font-size: 16px;
-            margin-right: 5px;
-          }
-        }
-      }
+      min-height: 380px;
       .login-form {
         .submit-button {
           background-color: #27ae60;
@@ -72,14 +57,12 @@
         padding-bottom: 0px;
         color: #27ae60;
       }
-      .desc1{
-        font-size: 14px;
-        font-weight: 500;
+      .desc {
         padding-bottom: 30px;
-        color: #787b79;
+        max-width: 200px;
+        text-align: center;
       }
       .help {
-        position: absolute;
         bottom: 25px;
         display: flex;
         justify-content: center;
@@ -90,8 +73,10 @@
         }
         .help-down {
           font-size: 24px;
-
-          display: inline;
+          display: flex;
+          flex-direction: row;
+          .sdt {
+          }
         }
       }
     }

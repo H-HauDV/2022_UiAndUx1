@@ -9,6 +9,7 @@ import WorkingProgressGeneral from "../components/WorkingProgressGeneral";
 import Chart from "../components/Chart";
 import { EyeOutlined, FallOutlined, RiseOutlined } from "@ant-design/icons";
 import { Table } from "antd";
+import { useEffect } from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -186,6 +187,9 @@ const tableData = [
   },
 ];
 export default function ProgressPage() {
+  useEffect(() => {
+    document.title = "Tiến độ";
+  }, []);
   const { state } = useContext(DataContext);
   const { userInfo } = state;
   return (
@@ -260,7 +264,7 @@ export default function ProgressPage() {
           <div className="manager-progress-page-wrapper">
             <div className="progress-page-container">
               <div className="progress-page-upper">
-                <div className="progress-page-title">Tiến độ</div>
+                <div className="progress-page-title">Tiến độ chung</div>
                 <div className="progress-page-calender">
                   <DatePicker />
                 </div>
@@ -269,7 +273,7 @@ export default function ProgressPage() {
                 <ManagerWorkingProgress />
                 <div className="attend-chart-wrapper">
                   <div className="chart-wrapper">
-                    <Chart title="Tỷ lệ điểm danh" />
+                    <Chart title="Tỷ lệ điểm danh trung bình các đội trưởng" />
                   </div>
                 </div>
               </div>

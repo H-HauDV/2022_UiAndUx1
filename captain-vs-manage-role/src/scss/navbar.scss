@@ -46,6 +46,21 @@
   .last-item {
     display: flex;
     align-items: center;
+    .global {
+      padding-left: 10px;
+      padding-right: 10px;
+
+      svg {
+        font-size: 24px;
+      }
+    }
+    .notice {
+      padding-left: 10px;
+      padding-right: 10px;
+      svg {
+        font-size: 24px;
+      }
+    }
   }
   .avatar {
     display: flex;

@@ -1,15 +1,21 @@
 import React, { useContext } from "react";
-import { Button, Form, Input, Image, Checkbox } from "antd";
+import { Button, Form, Input, Image, Checkbox,message } from "antd";
 import { DataContext } from "../store/GlobalState";
 import { loginFunc } from "../app-info/user";
 import { useAuth } from "../auth/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "../scss/login.scss";
+import { useEffect } from "react";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
-
+const key = 'updatable';
 export default function LoginPage() {
+  const openMessage = () => {
+    
+  };
   const { dispatch } = useContext(DataContext);
-
+  useEffect(() => {
+    document.title = "Login";
+  }, []);
   const auth = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
@@ -19,7 +25,20 @@ export default function LoginPage() {
     if (res.success) {
       dispatch({ type: "LOGIN", payload: { ...res.userInfo } });
       auth.login();
-      navigate(redirectPath, { replace: true });
+      message.loading({
+        content: 'Đăng nhập thành công, bạn sẽ được chuyển tới trang chủ trong 3 giây',
+        key,
+      });
+      setTimeout(() => {
+        message.success({
+          content: 'Chuyển hướng!',
+          key,
+          duration: 2,
+        });
+      }, 2000);
+      setTimeout(() => {
+        navigate(redirectPath, { replace: true });
+      }, 3000);
     }
   };
 
@@ -39,6 +58,7 @@ export default function LoginPage() {
         </div>
         <div className="login-company-name">
           <h2>Công ty cây xanh Hà Nội</h2>
+          <div className="des">Dành cho quản lý và đội trưởng</div>
         </div>
 
         <div className="login-form_container">

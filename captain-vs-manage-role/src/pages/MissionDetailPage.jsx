@@ -1,14 +1,40 @@
-import { Col, Row } from "antd";
+import { Col, Row, notification,Button, Form, Input, Space, Select } from "antd";
 import React from "react";
-import FirstSection from "../components/FirstSection";
 import Section from "../components/Section";
+import "../scss/missiondetail.scss";
+import {
+  MinusCircleOutlined,
+  PlusOutlined,
+  CheckCircleOutlined,
+} from "@ant-design/icons";
+const { Option } = Select;
+const children = [];
 
+for (let i = 10; i < 36; i++) {
+  children.push(<Option key={i.toString(36) + i}>{"Người" + i}</Option>);
+}
 export default function MissionDetailPage() {
+  const onFinish = (values) => {
+    console.log("Received values of form:", values);
+    openNotification()
+  };
+  const openNotification = () => {
+    notification.open({
+      message: "Thành công",
+      description: "Đã tạo phân chia công việc thành công.",
+      icon: (
+        <CheckCircleOutlined
+          className="noti-icon"
+          style={{
+            color: "#52c41a",
+          }}
+        />
+      ),
+    });
+  };
   return (
     <>
-      <FirstSection />
-
-      <Section title="Chi tiết nhiệm vụ">
+      <Section title="Giao nhiệm vụ">
         <div className="mission-details">
           <div className="mission-detail_header">
             <h2 className="mission-detail_title">
@@ -82,40 +108,20 @@ export default function MissionDetailPage() {
                   </Col>
                 </Row>
               </div>
-              <div>
-                <Row gutter={[16, 16]}>
-                  <Col className="gutter-row" span={4}>
-                    <div>
-                      <span className="row-name">Liên hệ công việc</span>
-                    </div>
-                  </Col>
-                  <Col className="gutter-row" span={8}>
-                    <div className="people-name">
-                      <span className="avatar">
-                        <img
-                          src="https://res.cloudinary.com/beeyou/image/upload/v1641721299/logo/avatar7_jkzd2h.png"
-                          alt=""
-                        />
-                      </span>
-                      <span>Đoàn Văn Hậu - Đội trưởng đội X</span>
-                    </div>
-                  </Col>
-                </Row>
-              </div>
             </div>
             <div className="mission-detail_content">
               <h4>Mô tả công việc</h4>
               <ul>
                 <li>
-                  Cắt hình tròn 50 cây từ số nhà xxx đường Đại Cồ Việt cho đến
-                  số nhà yyy Đại Cồ Việt
+                  Công việc 1: Cắt hình tròn 50 cây từ số nhà xxx đường Đại Cồ
+                  Việt cho đến số nhà yyy Đại Cồ Việt
                 </li>
-                <li>Bón phân</li>
-                <li>Tưới cây</li>
-                <li>Dọn dẹp</li>
+                <li>Công việc 2: Bón phân</li>
+                <li>Công việc 3: Tưới cây</li>
+                <li>Công việc 4: Dọn dẹp</li>
               </ul>
             </div>
-            <div className="mission-detail_content">
+            {/* <div className="mission-detail_content">
               <h4>Yêu cầu</h4>
               <ul>
                 <li>50 cây đạt hình tròn</li>
@@ -124,7 +130,92 @@ export default function MissionDetailPage() {
                 <li>Khu vực sau khi bảo dưỡng phải sạch sẽ</li>
                 <li>Không gây ảnh hưởng đến đường đi người dân</li>
               </ul>
-            </div>
+            </div> */}
+            <Form
+              name="dynamic_form_nest_item"
+              onFinish={onFinish}
+              autoComplete="off"
+            >
+              <Form.List name="users">
+                {(fields, { add, remove }) => (
+                  <>
+                    {fields.map(({ key, name, ...restField }) => (
+                      <Space
+                        key={key}
+                        style={{
+                          display: "flex",
+                          marginBottom: 8,
+                        }}
+                        align="baseline"
+                      >
+                        <Form.Item
+                          {...restField}
+                          name={[name, "first"]}
+                          rules={[
+                            {
+                              required: true,
+                              message: "Thiếu tên công việc",
+                            },
+                          ]}
+                        >
+                          <Input placeholder="Tên công việc" />
+                        </Form.Item>
+                        <Form.Item
+                          {...restField}
+                          name={[name, "last"]}
+                          rules={[
+                            {
+                              required: true,
+                              message: "Thiếu nội dung",
+                            },
+                          ]}
+                        >
+                          <Input placeholder="Nội dung" />
+                        </Form.Item>
+                        <MinusCircleOutlined onClick={() => remove(name)} />
+                      </Space>
+                    ))}
+                    <Form.Item>
+                      <Button
+                        type="dashed"
+                        onClick={() => add()}
+                        block
+                        icon={<PlusOutlined />}
+                      >
+                        Thêm các mô tả
+                      </Button>
+                    </Form.Item>
+                  </>
+                )}
+              </Form.List>
+              <Form.Item >
+                <Select
+                  mode="tags"
+                  placeholder="Hãy chọn người để nhận nhiệm vụ này"
+                  defaultValue={[]}
+                  style={{
+                    width: "100%",
+                  }}
+                  rules={[
+                    {
+                      required: true,
+                      message: "Thiếu người nhận việc",
+                    },
+                  ]}
+                >
+                  {children}
+                </Select>
+              </Form.Item>
+              <Form.Item>
+                <Button
+                  style={{ backgroundColor: "#24a567", border: "none" }}
+                  type="primary"
+                  htmlType="submit"
+                >
+                  Xác nhận
+                </Button>
+              </Form.Item>
+            </Form>
           </div>
         </div>
       </Section>

@@ -5,6 +5,7 @@ import "../scss/home.scss";
 import MissionCard from "../components/MissionCard";
 import Section from "../components/Section";
 import { Table, Tabs } from "antd";
+import { useEffect } from "react";
 import {
   CheckCircleOutlined,
   ClockCircleOutlined,
@@ -218,7 +219,9 @@ const tableData = [
 const HomePage = () => {
   const { state } = useContext(DataContext);
   const { userInfo } = state;
-
+  useEffect(() => {
+    document.title = "Dashboard";
+  }, []);
   return (
     <>
       {userInfo.role === "captain" && (
@@ -278,7 +281,7 @@ const HomePage = () => {
               </TabPane>
             </Tabs>
           </Section>
-          <Section title="Tiến độ công việc">
+          <Section title="Bản thân">
             <div className="work-timeline">
               <Featured />
               <Chart title={"Thống kê điểm danh trong 5 tháng"} />
@@ -288,14 +291,14 @@ const HomePage = () => {
       )}
       {userInfo.role === "manage" && (
         <>
-          <Section title="Tiến độ" hasDatePicker="true">
+          <Section title="Tiến độ chung" hasDatePicker="true">
             <div className="manager-progress-page-wrapper">
               <div className="progress-page-container">
                 <div className="progress-page-down">
                   <ManagerWorkingProgress />
                   <div className="attend-chart-wrapper">
                     <div className="chart-wrapper">
-                      <Chart title="Tỷ lệ điểm danh" />
+                      <Chart title="Tỷ lệ điểm danh trung bình các đội trưởng" />
                     </div>
                   </div>
                 </div>

@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../scss/teampage.scss";
 import Section from "../components/Section";
 import { Table, Tag } from "antd";
 import { EyeOutlined } from "@ant-design/icons";
-const columns = [
+import { DataContext } from "../store/GlobalState";
+import PageNotFound from "./PageNotFound";
+const membersListcolumns = [
   {
     title: "STT",
     dataIndex: "key",
@@ -27,6 +29,12 @@ const columns = [
     title: "Số điện thoại",
     dataIndex: "phone",
     key: "phone",
+    render: (text) => <p>{text}</p>,
+  },
+  {
+    title: "Chức vụ",
+    dataIndex: "position",
+    key: "position",
     render: (text) => <p>{text}</p>,
   },
   {
@@ -64,12 +72,13 @@ const columns = [
     ),
   },
 ];
-const data = [
+const membersListData = [
   {
     key: 1,
     msnv: "20184093",
     name: "Đoàn Văn Hậu",
     phone: "0994785226",
+    position: "Đội trưởng",
     mission: "4/5",
     status: 1,
   },
@@ -78,6 +87,7 @@ const data = [
     msnv: "20184141",
     name: "Phạm Thành Long",
     phone: "0617885226",
+    position: "Nhân viên",
     mission: "4/5",
     status: 0,
   },
@@ -86,6 +96,7 @@ const data = [
     msnv: "20184159",
     name: "Nguyễn Cảnh Nam",
     phone: "0821548597",
+    position: "Nhân viên",
     mission: "4/5",
     status: -1,
   },
@@ -94,6 +105,7 @@ const data = [
     msnv: "20184181",
     name: "Nguyễn Duy Quang",
     phone: "0915787666",
+    position: "Nhân viên",
     mission: "4/5",
     status: 1,
   },
@@ -102,6 +114,7 @@ const data = [
     msnv: "20184113",
     name: "Nguyễn Văn Hồng",
     phone: "0115227889",
+    position: "Nhân viên",
     mission: "3/5",
     status: 1,
   },
@@ -110,6 +123,7 @@ const data = [
     msnv: "20184113",
     name: "Nguyễn Văn Hồng",
     phone: "0115227889",
+    position: "Nhân viên",
     mission: "3/5",
     status: 0,
   },
@@ -118,15 +132,27 @@ const data = [
     msnv: "20184113",
     name: "Nguyễn Văn Hồng",
     phone: "0115227889",
+    position: "Nhân viên",
     mission: "3/5",
     status: -1,
   },
 ];
 
 export default function TeamPage() {
+  const { state } = useContext(DataContext);
+  const { userInfo } = state;
   return (
-    <Section title="Danh sách nhân viên đội 1">
-      <Table className="employees-table" columns={columns} dataSource={data} />
-    </Section>
+    <>
+      {userInfo.role === "captain" && <PageNotFound />}
+      {userInfo.role === "manage" && (
+        <Section title="Danh sách đội 1">
+          <Table
+            className="employees-table"
+            columns={membersListcolumns}
+            dataSource={membersListData}
+          />
+        </Section>
+      )}
+    </>
   );
 }

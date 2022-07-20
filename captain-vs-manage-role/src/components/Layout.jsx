@@ -1,5 +1,5 @@
 import React from "react";
-import Sidebar from "./Sidebar";
+import Sidebar from "./Sidebar.jsx";
 import Navbar from "./Navbar";
 import { useLocation } from "react-router-dom";
 import "../scss/layout.scss";

@@ -7,10 +7,10 @@ const Featured = () => {
   return (
     <div className="featured">
       <div className="upper">
-        <h1 className="title">Progress this week</h1>
+        <h1 className="title">Tiến độ công việc tuần này</h1>
         <MoreOutlined />
       </div>
-      <div className="bottom" style={{flexDirection:"column"}}>
+      <div className="bottom" style={{ flexDirection: "column" }}>
         <div className="featuredChart">
           <CircularProgressbar
             value={70}
@@ -23,13 +23,11 @@ const Featured = () => {
             })}
           />
         </div>
-        <p className="title">Work's code</p>
+        <p className="title">Mã công việc</p>
         <p className="amount">2022B.06.WAF1</p>
-        <p className="desc">
-          Main goal is clear all tree from street A to street F
-        </p>
+        <p className="desc">Mục tiêu: Cắt tỉa cây từ khu phố A đến khu phố F</p>
         <div className="goal">
-          <div className="title">Target</div>
+          <div className="title">Cần đạt tiến độ trong ngày hôm nay</div>
           <div className="detail">
             <FlagOutlined className="icon" />
             <div className="number">87%</div>

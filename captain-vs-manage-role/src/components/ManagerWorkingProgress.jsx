@@ -2,7 +2,6 @@ import React from "react";
 import "../scss/managerworkingprogress.scss";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import { MoreOutlined } from "@ant-design/icons";
 const ManagerWorkingProgress = () => {
   return (
     <div className="featured">
@@ -25,8 +24,8 @@ const ManagerWorkingProgress = () => {
         <div className="right">
           <div className="extra">
             <div className="text">
-              Đã hoàn thành<div className="green">144</div> trên{" "}
-              <div className="green">180</div>nhiệm vụ
+              Đã hoàn thành<span className="green">144</span> trên{" "}
+              <span className="green">180</span>nhiệm vụ
             </div>
           </div>
           <div className="up">

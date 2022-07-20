@@ -1,7 +1,6 @@
 import {
   ContainerOutlined,
   HomeOutlined,
-  ProfileOutlined,
   UserOutlined,
   TeamOutlined,
   FundOutlined,
@@ -22,11 +21,6 @@ export const workerMenu = [
     icon: <UserOutlined />,
   },
   {
-    label: "Lịch chấm công",
-    link: "/lich-cham-cong",
-    icon: <ProfileOutlined />,
-  },
-  {
     label: "Nhiệm vụ",
     link: "/nhiem-vu",
     icon: <ContainerOutlined />,
@@ -44,11 +38,6 @@ export const captainMenu = [
     label: "Thông tin cá nhân",
     link: "/thong-tin-ca-nhan",
     icon: <UserOutlined />,
-  },
-  {
-    label: "Lịch chấm công",
-    link: "/lich-cham-cong",
-    icon: <ProfileOutlined />,
   },
   {
     label: "Nhiệm vụ",
@@ -84,9 +73,9 @@ export const managerMenu = [
     icon: <UserOutlined />,
   },
   {
-    label: "Lịch chấm công",
-    link: "/lich-cham-cong",
-    icon: <ProfileOutlined />,
+    label: "Nhiệm vụ",
+    link: "/nhiem-vu",
+    icon: <ContainerOutlined />,
   },
   {
     label: "Báo cáo",

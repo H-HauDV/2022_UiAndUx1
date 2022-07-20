@@ -1,7 +1,7 @@
 import React from "react";
 import "../scss/progresscard.scss";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
-import { FaClipboardList } from "react-icons/fa";
+import { ProfileOutlined } from "@ant-design/icons";
 const ProgressCard = ({ title, percent, min, max }) => {
   return (
     <div className="prog-card-wrapper">
@@ -29,7 +29,7 @@ const ProgressCard = ({ title, percent, min, max }) => {
           </div>
           <div className="text-down">
             <div className="icon">
-              <FaClipboardList />
+              <ProfileOutlined />
             </div>
             <div className="text">Xem nhiệm vụ</div>
           </div>

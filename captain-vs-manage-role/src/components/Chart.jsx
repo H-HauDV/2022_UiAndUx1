@@ -15,11 +15,11 @@ const data = [
   { name: "April", Days: 29 },
   { name: "May", Days: 25 },
 ];
-const Chart = ({title}) => {
+const Chart = ({ title }) => {
   return (
     <div className="chart">
       <div className="title">{title}</div>
-      <ResponsiveContainer width="100%" height="100%" aspect={2 / 1}>
+      <ResponsiveContainer width="100%" height="100%" aspect={3 / 2}>
         <AreaChart
           data={data}
           margin={{

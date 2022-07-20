@@ -2,7 +2,7 @@ import React from "react";
 import Section from "./Section";
 import "../scss/attendancereport.scss";
 import { DatePicker } from "antd";
-import OverviewCard from "../components/OverViewCard";
+import OverviewCard from "./OverViewCard";
 import WorkingAttendChart from "./WorkingAttendChart";
 import WorkingWorkerList from "./WorkingWorkerList";
 

@@ -16,33 +16,33 @@ export default function ReportPage() {
   return (
     <>
       <FirstSection />
-      <Section title="Danh sách nhiệm vụ">
+      <Section title="Báo cáo nhiệm vụ">
         <Tabs defaultActiveKey="1" className="mission-tabs">
           <TabPane tab="Theo tuần" key="1">
             <div className="report-wrapper">
               <div className="report-header">
-                <h2>Report current work</h2>
+                <h2>Báo cáo nhiệm vụ</h2>
               </div>
               <div className="report-content">
                 <div className="report-content-item">
-                  <h4>Descibe of this work</h4>
-                  <p>Worker need to cut tree from street A to street B</p>
+                  <h4>Mô tả nhiệm vụ</h4>
+                  <p>Công nhân cần cắt tỉa cây từ phố A đến phố F</p>
                 </div>
                 <div className="report-content-item">
-                  <h4>Comment of worker</h4>
+                  <h4>Mô tả tiến độ</h4>
                   <input type="text" />
                 </div>
                 <div className="report-content-item">
-                  <h4>Progress</h4>
+                  <h4>Tiến độ</h4>
                   <Slider marks={marks} step={10} defaultValue={0} />
                 </div>
                 <div className="report-content-item">
-                  <h4>Estimate working day</h4>
+                  <h4>Thời gian hoàn thành</h4>
                   <RangePicker />
                 </div>
               </div>
               <div className="report-footer">
-                <button className="my-btn btn-success">Send</button>
+                <button className="my-btn btn-success">Gửi báo cáo</button>
               </div>
             </div>
           </TabPane>
@@ -50,28 +50,28 @@ export default function ReportPage() {
             {" "}
             <div className="report-wrapper">
               <div className="report-header">
-                <h2>Report current work</h2>
+                <h2>Báo cáo nhiệm vụ</h2>
               </div>
               <div className="report-content">
                 <div className="report-content-item">
-                  <h4>Descibe of this work</h4>
-                  <p>Worker need to cut tree from street A to street B</p>
+                  <h4>Mô tả nhiệm vụ</h4>
+                  <p>Công nhân cần cắt tỉa cây từ phố A đến phố F</p>
                 </div>
                 <div className="report-content-item">
-                  <h4>Comment of worker</h4>
+                  <h4>Mô tả tiến độ</h4>
                   <input type="text" />
                 </div>
                 <div className="report-content-item">
-                  <h4>Progress</h4>
+                  <h4>Tiến độ</h4>
                   <Slider marks={marks} step={10} defaultValue={0} />
                 </div>
                 <div className="report-content-item">
-                  <h4>Estimate working day</h4>
+                  <h4>Thời gian hoàn thành</h4>
                   <RangePicker />
                 </div>
               </div>
               <div className="report-footer">
-                <button className="my-btn btn-success">Send</button>
+                <button className="my-btn btn-success">Gửi báo cáo</button>
               </div>
             </div>
           </TabPane>

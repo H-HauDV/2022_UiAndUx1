@@ -61,7 +61,6 @@ const CalendarComp = () => {
   };
   return (
     <div className="calendar">
-      <div className="title">Attendance this month</div>
       <Calendar
         dateCellRender={dateCellRender}
         monthCellRender={monthCellRender}

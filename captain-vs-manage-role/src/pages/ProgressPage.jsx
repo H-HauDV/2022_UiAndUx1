@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "../scss/progresspage.scss";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { DataContext } from "../store/GlobalState";
 import ProgressCard from "../components/ProgressCard";
 import ManagerWorkingProgress from "../components/ManagerWorkingProgress";
@@ -128,7 +128,7 @@ const columns = [
     key: "action",
     align: "center",
     render: (_, record) => (
-      <Link  to="/tien-do-nho" className="icon-wrapper">
+      <Link to="/tien-do-nho" className="icon-wrapper">
         <EyeOutlined style={{ color: "#eea620" }} />
       </Link>
     ),

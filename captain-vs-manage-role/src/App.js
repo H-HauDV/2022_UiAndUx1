@@ -14,7 +14,7 @@ import SmallProgressPage from "./pages/SmallProgressPage";
 
 import TeamPage from "./pages/TeamPage";
 import CreateTask from "./pages/CreateTask";
-import DeliverMissionPage from "./pages/DeliverMissionPage";
+import TeamDetailPage from "./pages/TeamDetailPage";
 import MissionDetailPage from "./pages/MissionDetailPage";
 
 function App() {
@@ -102,14 +102,24 @@ function App() {
                 }
               />
 
-              <Route
-                path="/nhan-vien"
-                element={
-                  <RequireAuth>
-                    <TeamPage />
-                  </RequireAuth>
-                }
-              />
+              <Route path="nhan-vien">
+                <Route
+                  path="doi"
+                  element={
+                    <RequireAuth>
+                      <TeamDetailPage />
+                    </RequireAuth>
+                  }
+                />
+                <Route
+                  index
+                  element={
+                    <RequireAuth>
+                      <TeamPage />
+                    </RequireAuth>
+                  }
+                />
+              </Route>
               <Route path="/login" element={<LoginPage />} />
               <Route path="*" element={<PageNotFound />} />
             </Routes>
